@@ -44,28 +44,38 @@ let copyToastTimer: number | undefined;
 
 $("#app").innerHTML = `
   <main>
-    <h1>牌理</h1>
-    <section class="source-panel" aria-label="截图识牌">
-      <div class="toolbar">
-        <button id="choose-file">选择图片</button><button id="capture">框选截图</button><input id="file" type="file" accept="image/png,image/jpeg,image/webp" hidden/>
-        <button id="recognize-local" class="primary" disabled>本地识牌</button><select id="model" aria-label="在线识牌模型" hidden disabled><option>正在加载模型…</option></select><button id="refresh-models" title="刷新模型列表" hidden>刷新</button><button id="recognize" hidden disabled>在线识牌</button>
-      </div>
-      <div id="dropzone" class="dropzone"><div id="empty-image">拖入或粘贴雀魂 / 天凤截图</div><canvas id="preview" hidden aria-label="手牌截图，拖动框选裁剪区域"></canvas></div>
-      <div class="toolbar crop-tools"><button id="crop" hidden>应用裁剪</button><button id="restore-image" hidden>还原图片</button></div>
-      <p class="hint">粘贴图片后自动本地识牌，支持雀魂标准、猫咪雀圣、飞鸟与鱼和天凤标准。若识别不完整，可框选横向手牌、应用裁剪后重新识牌；保留完整牌面、排除副露。本地识别不上传图片。</p><p id="recognition-status" role="status" class="status"></p>
-    </section>
-    <section class="hand-panel" aria-label="手牌编辑">
-      <div class="section-head"><label for="hand-text">手牌</label><span id="tile-count" class="muted">0 张</span><div class="toolbar"><button id="sort">理牌</button><button id="clear">清空</button></div></div>
-      <textarea id="hand-text" rows="1" spellcheck="false" placeholder="输入天凤牌串，如 123m245779p13555z"></textarea>
-      <p class="hint">m 万 · p 筒 · s 索 · z 字（1–7：东南西北白发中）· 0 赤五</p>
+    <header class="page-head"><h1>牌理</h1><p class="hint">直接粘贴截图，自动识牌并计算进张</p></header>
+    <p id="recognition-status" role="status" class="status"></p>
+    <section class="hand-overview" aria-label="手牌校正">
+      <div class="section-head"><h2>手牌</h2><span id="tile-count" class="muted">0 张</span><div class="toolbar"><button id="sort">理牌</button><button id="clear">清空</button></div></div>
       <div id="hand" class="hand" aria-label="当前手牌"></div>
-      <details id="tile-editor"><summary>点选牌表</summary><div class="toolbar edit-tools"><span id="edit-mode" class="muted">点击牌表添加</span><button id="add-mode">添加</button><button id="delete-tile" disabled>删除选中</button></div><div id="palette" class="palette" aria-label="麻将牌表"></div></details>
-      <details id="meld-details"><summary>已知吃碰杠（可选）</summary><label class="field-label" for="meld-text">每组用空格分隔，杠填写四张</label><input id="meld-text" spellcheck="false" placeholder="例如 123m 555p 7777z"/></details>
     </section>
-    <section class="results-panel"><div class="section-head"><h2>进张</h2><div class="toolbar"><button id="undo" disabled>撤销推演</button><button id="tenhou" title="仅传递手牌，不含已知副露和推演弃牌" disabled>天凤查看</button><button id="copy" disabled>复制牌串</button></div></div>
-      <p id="calculation-note" class="hint"></p><div id="analysis" aria-live="polite"></div>
-      <p id="simulation" class="hint"></p>
-    </section>
+    <div class="workspace">
+      <section class="results-panel" aria-label="进张分析"><div class="section-head"><h2>进张</h2><div class="toolbar"><button id="undo" disabled>撤销推演</button><button id="tenhou" title="仅传递手牌，不含已知副露和推演弃牌" disabled>天凤查看</button><button id="copy" disabled>复制牌串</button></div></div>
+        <p id="calculation-note" class="hint"></p><div id="analysis" aria-live="polite"></div>
+        <p id="simulation" class="hint"></p>
+      </section>
+      <aside class="editor-panel" aria-label="手牌与图片工具">
+        <section class="hand-panel" aria-label="手牌编辑">
+          <div class="section-head"><label for="hand-text">手牌牌串</label></div>
+          <textarea id="hand-text" rows="1" spellcheck="false" placeholder="输入天凤牌串，如 123m245779p13555z"></textarea>
+          <p class="hint">m 万 · p 筒 · s 索 · z 字（1–7：东南西北白发中）· 0 赤五</p>
+          <details id="tile-editor"><summary>点选牌表</summary><div class="toolbar edit-tools"><span id="edit-mode" class="muted">点击牌表添加</span><button id="add-mode">添加</button><button id="delete-tile" disabled>删除选中</button></div><div id="palette" class="palette" aria-label="麻将牌表"></div></details>
+          <details id="meld-details"><summary>已知吃碰杠（可选）</summary><label class="field-label" for="meld-text">每组用空格分隔，杠填写四张</label><input id="meld-text" spellcheck="false" placeholder="例如 123m 555p 7777z"/></details>
+        </section>
+        <section class="source-panel" aria-label="截图识牌">
+          <details id="image-tools"><summary>图片与识牌工具</summary>
+            <div class="toolbar">
+              <button id="choose-file">选择图片</button><button id="capture">框选截图</button><input id="file" type="file" accept="image/png,image/jpeg,image/webp" hidden/>
+              <button id="recognize-local" disabled>本地识牌</button><select id="model" aria-label="在线识牌模型" hidden disabled><option>正在加载模型…</option></select><button id="refresh-models" title="刷新模型列表" hidden>刷新</button><button id="recognize" hidden disabled>在线识牌</button>
+            </div>
+            <div id="dropzone" class="dropzone"><div id="empty-image">拖入雀魂 / 天凤截图</div><canvas id="preview" hidden aria-label="手牌截图，拖动框选裁剪区域"></canvas></div>
+            <div class="toolbar crop-tools"><button id="crop" hidden>应用裁剪</button><button id="restore-image" hidden>还原图片</button></div>
+            <p class="hint">支持雀魂标准、猫咪雀圣、飞鸟与鱼和天凤标准，图片仅在本地识别。选图或截图后点击本地识牌；若识别不完整，可框选手牌、应用裁剪后重试。</p>
+          </details>
+        </section>
+      </aside>
+    </div>
   </main>
   <div id="copy-toast" class="toast" role="status" hidden></div>`;
 
@@ -150,7 +160,7 @@ function renderAnalysis(): void {
     if (inputError) throw new Error(inputError);
     if (!slots.length) {
       $("#analysis").innerHTML =
-        '<div class="empty-result">输入手牌后显示进张结果。</div>';
+        '<div class="empty-result">粘贴截图或输入手牌后显示进张结果。</div>';
       return;
     }
     if (slots.includes(null))
