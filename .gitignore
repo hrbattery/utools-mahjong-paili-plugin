@@ -4,6 +4,8 @@ engine/target/
 .DS_Store
 samples/private/
 *.upx
+*.upxs
+release/
 .env
 .env.*
 !.env.example

@@ -2,6 +2,10 @@
 
 uTools 8 牌理工具：导入截图或输入天凤牌串，查看向听数、有效进张和切牌候选。识牌与计算均在本地完成，不上传截图。
 
+## 安装
+
+从 [GitHub Releases](https://github.com/hrbattery/utools-mahjong-paili-plugin/releases/latest) 下载 `.upxs` 安装包，复制文件后在 uTools 搜索框中粘贴，选择安装插件应用。安装后搜索「牌理」即可打开。
+
 ## 运行
 
 开发环境使用 Node.js 24 或更新版本。
@@ -73,7 +77,7 @@ npm run build:engine
 - 一个插件一个仓库；在主分支维护稳定版本，较大的修改使用功能分支和 Pull Request。
 - GitHub Topics 建议设置为 `utools`、`utools-plugin`、`mahjong`、`riichi`。
 - 提交前运行 `npm test` 和 `npm run test:ui`；GitHub Actions 使用同样的检查。
-- 版本采用 `0.1.0` 格式，Git 标签使用 `v0.1.0`；发布时同步 `package.json`、`package-lock.json`、`engine/Cargo.toml`、`engine/Cargo.lock` 及 uTools 开发者工具中的版本信息。
+- 版本采用 `1.0.0` 格式，Git 标签使用 `v1.0.0`；发布时同步 `package.json`、`package-lock.json`、`engine/Cargo.toml`、`engine/Cargo.lock` 及 uTools 开发者工具中的版本信息。
 - 发布前更新 [CHANGELOG.md](CHANGELOG.md)，运行构建，并在实际 uTools 中检查导入、截图权限和本地识牌。
 - uTools 开发者工具仅打包 `dist/`；GitHub Releases 附上插件安装包和更新说明。依赖目录、编译缓存、私人样本和安装包不提交 Git。
 - 构建会将项目 `LICENSE`、`THIRD_PARTY_NOTICES.md` 和 `public/licenses/` 一并放入 `dist/`，发布时保留这些文件。

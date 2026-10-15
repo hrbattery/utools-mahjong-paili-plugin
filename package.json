@@ -1,6 +1,6 @@
 {
   "name": "utools-mahjong-paili-plugin",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "uTools 日麻牌理速查：本地截图识牌、向听数与有效进张分析",
   "license": "MIT",
   "private": true,
