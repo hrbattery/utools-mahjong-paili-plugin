@@ -95,6 +95,12 @@ summary:focus-visible {
   padding-bottom: 12px;
   border-bottom: 1px solid #e5e5e5;
 }
+#auto-sort {
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease;
+}
 #auto-sort[aria-pressed="true"] {
   background: #333;
   border-color: #333;
@@ -262,6 +268,21 @@ input {
 details {
   margin-top: 8px;
 }
+/* Retain native disclosure behavior while animating both opening and closing. */
+details::details-content {
+  block-size: 0;
+  opacity: 0;
+  overflow: clip;
+  interpolate-size: allow-keywords;
+  transition:
+    block-size 160ms ease,
+    opacity 140ms ease,
+    content-visibility 160ms allow-discrete;
+}
+details[open]::details-content {
+  block-size: auto;
+  opacity: 1;
+}
 summary {
   width: fit-content;
   cursor: pointer;
@@ -373,7 +394,8 @@ td:last-child {
   position: fixed;
   left: 50%;
   bottom: 24px;
-  transform: translateX(-50%);
+  transform: translate(-50%, 4px);
+  opacity: 0;
   z-index: 1000;
   max-width: calc(100% - 32px);
   padding: 10px 16px;
@@ -383,6 +405,27 @@ td:last-child {
   box-shadow: 0 4px 12px #0002;
   text-align: center;
   pointer-events: none;
+  transition:
+    opacity 140ms ease,
+    transform 140ms ease,
+    display 140ms allow-discrete;
+}
+.toast:not([hidden]) {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+@starting-style {
+  .toast:not([hidden]) {
+    opacity: 0;
+    transform: translate(-50%, 4px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #auto-sort,
+  details::details-content,
+  .toast {
+    transition: none;
+  }
 }
 @media (max-width: 720px) {
   .workspace {
