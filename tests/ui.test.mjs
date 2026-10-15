@@ -77,9 +77,17 @@ function mockHost() {
   };
 }
 
-test('production bundle loads the inline WASM without fetch or host APIs', async () => {
+test('production bundle loads inline WASM and all local tile faces without host APIs', async () => {
   const { dom, query, enter } = mount();
   try {
+    dom.reconfigure({ url: new URL('../dist/index.html', import.meta.url).href });
+    const faces = [...dom.window.document.querySelectorAll('#palette img')];
+    assert.equal(faces.length, 37);
+    assert.equal(new Set(faces.map((face) => face.src)).size, 37);
+    for (const face of faces) {
+      assert.match(face.src, /^file:/);
+      assert.equal((await sharp(new URL(face.src).pathname).metadata()).format, 'svg');
+    }
     enter('#hand-text', '13m123456p11s1z');
     await until(() => query('.metrics'));
     assert.equal(query('#tile-count').textContent, '11 张');
@@ -96,9 +104,9 @@ test('text and point replacement are synchronized; invalid text clears stale res
     enter('#hand-text', '123m45p11z1s');
     await until(() => query('.metrics'));
     assert.equal(query('#tile-editor').open, false);
-    query('[data-index="0"]').click();
+    query('[data-index="0"] img').click();
     assert.equal(query('#tile-editor').open, true);
-    query('[data-pick="9m"]').click();
+    query('[data-pick="9m"] img').click();
     assert.equal(query('#hand-text').value, '923m45p11z1s');
     assert.equal(query('#hand [data-index="0"]').title, '9万 · 9m');
     enter('#hand-text', '8z');
@@ -113,13 +121,13 @@ test('discard, draw, sort and undo preserve simulation state', async () => {
   try {
     enter('#hand-text', '123m45p11z1s');
     await until(() => query('.metrics'));
-    query('[data-discard="0"]').click();
+    query('[data-discard="0"] img').click();
     const afterDiscard = query('#hand-text').value;
     const known = query('#simulation').textContent;
     assert.equal(query('#tile-count').textContent, '7 张');
     query('#sort').click();
     assert.equal(query('#simulation').textContent, known);
-    query('[data-draw]').click();
+    query('[data-draw] img').click();
     assert.equal(query('#tile-count').textContent, '8 张');
     query('#undo').click();
     assert.equal(query('#tile-count').textContent, '7 张');

@@ -24,7 +24,15 @@ The Rust dependency graph is pinned in `engine/Cargo.lock`. Runtime transitive d
 - Mahjong Soul standard was copied from the user's riichi.moe `tiles/discard tiles/mjp_default/hand.png` download. Cat Saint came from the public Mahjong Soul web client resources. Birdie and Fishie came from the riichi.moe Unity texture extraction mirror. Exact URLs, where available, are in the source metadata.
 - The 37 Tenhou GIFs were copied byte-for-byte from the existing local cache of `https://cdn.tenhou.net/2/t/{tile}.gif`.
 - `assets/recognition-templates/` contains 148 lossless PNG crops and a manifest of source rectangles and SHA-256 digests. `src/generated/tile-templates.json` contains derived glyph/color descriptors embedded in the plugin for offline matching. Original atlases and individual PNGs are not bundled; descriptors are derived from these third-party images.
-- These game images and derivatives are not covered by shanten-dp's MIT license. The source records document provenance, not a redistribution license grant. The visible hand editor continues to use original text/CSS tiles.
+- These game images and derivatives are not covered by shanten-dp's MIT license. The source records document provenance, not a redistribution license grant.
+
+## Display tile artwork
+
+- Author/source: lietxia, https://github.com/lietxia/mahjong_graphic, commit `3e275804ff58325306710bef3a7406860444bc6a`.
+- The 37 SVGs in `public/tiles/mahjong-graphic/` are unmodified copies of `Vectors 矢量图/SVG/{tile}.svg`, including the three red fives and white dragon. File hashes and upstream paths are recorded in `assets/mahjong-graphic/source.json`.
+- License: upstream M+ Font License, reproduced verbatim in `public/licenses/mahjong-graphic-Mplus.txt` and distributed with the plugin. It permits use, copying, modification and redistribution, including commercial use, without warranty.
+- Upstream credits some glyphs to SyaoranHinata/I.Mahjong and GL-MahjongTile; see its `readme.md`.
+- Usage: offline display in the hand editor, tile palette, discards and waits. These SVGs are separate from the recognition template library.
 
 ## Reference application
 

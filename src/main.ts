@@ -78,18 +78,11 @@ function escapeHtml(text: string): string {
   );
 }
 
-/** Render a tile as a readable button; all tile values are parser-validated. */
+/** Render a local SVG face while retaining accessible names and the existing button actions. */
 function tileButton(tile: Tile | null, attributes = ""): string {
   if (tile === null)
     return `<button class="tile unknown" ${attributes} aria-label="未识别牌，点击校正"><b>?</b><small>待校正</small></button>`;
-  const suit = tile[1];
-  const rank = tile[0] === "0" ? "5" : tile[0];
-  const face = suit === "z" ? tileName(tile) : rank;
-  const mark =
-    suit === "z"
-      ? ""
-      : ({ m: "萬", p: "筒", s: "索" } as Record<string, string>)[suit];
-  return `<button class="tile ${suit} ${tile[0] === "0" ? "red" : ""}" ${attributes} aria-label="${tileName(tile)} (${tile})" title="${tileName(tile)} · ${tile}"><b>${face}</b><span>${mark}</span><small>${tile}</small></button>`;
+  return `<button class="tile" ${attributes} aria-label="${tileName(tile)} (${tile})" title="${tileName(tile)} · ${tile}"><img src="./tiles/mahjong-graphic/${tile}.svg" alt="" draggable="false"/></button>`;
 }
 
 /** Keep uncertain positions in the text preview without inventing a tile value. */

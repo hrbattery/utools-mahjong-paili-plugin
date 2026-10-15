@@ -184,38 +184,31 @@ input {
   flex-shrink: 0;
   width: 32px;
   height: 44px;
-  padding: 2px;
+  padding: 0;
+  border: 0;
+  background: transparent;
   border-radius: 3px;
   vertical-align: middle;
   line-height: 1;
 }
-.tile b {
+.tile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.tile:hover:not(:disabled) img {
+  filter: brightness(0.94);
+}
+.tile.unknown b {
   font-family: "Songti SC", "Noto Serif CJK SC", serif;
   font-size: 20px;
   font-weight: 600;
 }
-.tile span {
-  margin-top: 3px;
-  font-size: 11px;
-}
-.tile small {
-  display: none;
-}
-.tile.m {
-  color: #795548;
-}
-.tile.p {
-  color: #3f627e;
-}
-.tile.s {
-  color: #38704c;
-}
-.tile.red {
-  color: #b53232;
-}
 .tile.unknown {
   color: #99631a;
-  border-color: #bf944f;
+  border: 1px solid #bf944f;
+  background: #fff6e9;
 }
 .tile.unknown small {
   display: block;
@@ -335,12 +328,6 @@ td:last-child {
 .waits .tile {
   width: 28px;
   height: 38px;
-}
-.waits .tile b {
-  font-size: 18px;
-}
-.waits .tile span {
-  font-size: 10px;
 }
 .complete {
   font-size: 13px;

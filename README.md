@@ -19,6 +19,8 @@ npm run dev
 
 本地识牌使用 **雀魂标准、猫咪雀圣、飞鸟与鱼、天凤标准** 四套共 148 张模板，含各套三种赤五。先拖动框选自己的横向手牌（包含单独摸牌，排除副露），点击“应用裁剪”，再点击“本地识牌”。识别自动比较四套模板，不上传截图。绿色框表示已匹配，橙色框和 `?` 表示待校正；不要用框的颜色代替核对牌数。当前不支持整桌自动定位、旋转牌、严重遮挡或过小牌面；边缘截断、强特效也可能漏牌，仍需人工确认。
 
+手牌、点选牌表与进张结果使用 [lietxia/mahjong_graphic](https://github.com/lietxia/mahjong_graphic) 的 37 张 SVG 牌面，包含赤五和白板，随插件本地打包。鼠标悬停可查看牌名和编码，未知牌仍显示 `?` 供校正。素材保存在 `public/tiles/mahjong-graphic/`，固定版本与摘要见 `assets/mahjong-graphic/source.json`，许可随包附在 `public/licenses/`；显示素材不参与识别匹配。
+
 原始素材在 `assets/<皮肤>/`，逐张原尺寸 PNG 和来源 / SHA-256 / 裁切坐标在 [assets/recognition-templates/](assets/recognition-templates/)。运行 `npm run templates:prepare` 可离线重新切分和生成 `src/generated/tile-templates.json`。运行时只内联图案与颜色特征，避免 uTools `file://` 下的资源请求；原始图集及样本截图不进入 `dist/`。本地匹配根据亮色牌面分割、图案相似度和颜色区分赤五，不按牌理补牌；分数不足或不同牌种得分过近时保留 `?`。
 
 ## 输入与计算约定
@@ -36,7 +38,7 @@ npm run dev
 
 ## 复用边界
 
-复用 tomohxx 的 **shanten-dp 0.3.2（MIT）**，保留版本锁与许可。自写标量 WebAssembly 桥接层，前端无服务器计算依赖。`pairi` 仓库在检视的提交 `6da8b46bc8b68fa936985dfb6f9bdce604c211e7` 未见许可证文件，因此没有复制其页面组件或图片资源。牌面使用本项目的文字/CSS 绘制。
+复用 tomohxx 的 **shanten-dp 0.3.2（MIT）**，保留版本锁与许可。自写标量 WebAssembly 桥接层，前端无服务器计算依赖。`pairi` 仓库在检视的提交 `6da8b46bc8b68fa936985dfb6f9bdce604c211e7` 未见许可证文件，因此没有复制其页面组件或图片资源。显示牌面来自上述 mahjong_graphic 素材库，使用其 M+ 字型许可。
 
 来源与许可见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
