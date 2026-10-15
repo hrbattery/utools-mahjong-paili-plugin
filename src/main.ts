@@ -45,14 +45,14 @@ let copyToastTimer: number | undefined;
 
 $("#app").innerHTML = `
   <main>
-    <header class="page-head"><h1>牌理</h1><p class="hint">直接粘贴截图，自动识牌并计算进张</p></header>
+    <header class="page-head"><h1>日麻牌理</h1><p class="hint">直接粘贴截图，自动识牌并计算进张</p></header>
     <p id="recognition-status" role="status" class="status"></p>
     <section class="hand-overview" aria-label="手牌校正">
       <div class="section-head"><h2>手牌</h2><span id="tile-count" class="muted">0 张</span><div class="toolbar"><button id="auto-sort" aria-pressed="true">自动理牌：开</button><button id="clear">清空</button></div></div>
       <div id="hand" class="hand" aria-label="当前手牌"></div>
     </section>
     <div class="workspace">
-      <section class="results-panel" aria-label="进张分析"><div class="section-head"><h2>进张</h2><div class="toolbar"><button id="undo" disabled>撤销推演</button><button id="tenhou" title="仅传递手牌，不含已知副露和推演弃牌" disabled>天凤查看</button><button id="copy" disabled>复制牌串</button></div></div>
+      <section class="results-panel" aria-label="进张分析"><div class="section-head"><h2>进张</h2><div class="toolbar"><button id="undo" disabled>撤销推演</button><button id="tenhou" title="仅传递手牌，不含已知副露和推演弃牌" disabled>跳转天凤牌理</button><button id="copy" disabled>复制牌串</button></div></div>
         <p id="calculation-note" class="hint"></p><div id="analysis" aria-live="polite"></div>
         <p id="simulation" class="hint"></p>
       </section>
@@ -72,7 +72,7 @@ $("#app").innerHTML = `
             </div>
             <div id="dropzone" class="dropzone"><div id="empty-image">拖入雀魂 / 天凤截图</div><canvas id="preview" hidden aria-label="手牌截图，拖动框选裁剪区域"></canvas></div>
             <div class="toolbar crop-tools"><button id="crop" hidden>应用裁剪</button><button id="restore-image" hidden>还原图片</button></div>
-            <p class="hint">支持雀魂标准、猫咪雀圣、飞鸟与鱼和天凤标准，图片仅在本地识别。选图或截图后点击本地识牌；若识别不完整，可框选手牌、应用裁剪后重试。</p>
+            <p class="hint">支持雀魂和天凤标准游戏截图。图片仅在本地识别。若识别不完整，可手动选择增减替换手牌。</p>
           </details>
         </section>
       </aside>
