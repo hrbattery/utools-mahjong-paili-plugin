@@ -57,9 +57,13 @@ function mockHost() {
   let onEnter;
   let resolveAi;
   let lastOptions;
+  let modelRequests = 0;
   return {
     api: {
-      allAiModels: async () => [{ id: 'text-only', label: 'text' }, { id: 'vision-test', label: 'test', vision: true }],
+      allAiModels: async () => {
+        modelRequests++;
+        return [{ id: 'text-only', label: 'text' }, { id: 'vision-test', label: 'test', vision: true }];
+      },
       onPluginEnter: (callback) => { onEnter = callback; },
       ai: (options) => { lastOptions = options; return new Promise((resolve) => { resolveAi = resolve; }); },
       screenCapture() {},
@@ -69,6 +73,7 @@ function mockHost() {
     image: () => onEnter({ type: 'img', payload: 'data:image/png;base64,c3ludGhldGlj' }),
     resolve: (content) => resolveAi({ content }),
     options: () => lastOptions,
+    modelRequests: () => modelRequests,
   };
 }
 
@@ -144,6 +149,8 @@ test('mock vision output preserves unknown positions until point correction', as
   const host = mockHost();
   const { dom, query } = mount(host.api);
   try {
+    // Exercise the retained online implementation explicitly; its controls are hidden in the product.
+    query('#refresh-models').click();
     host.image();
     await until(() => !query('#recognize').disabled);
     assert.equal(query('#model').options.length, 1);
@@ -163,6 +170,7 @@ test('late recognition never overwrites a manual text correction', async () => {
   const host = mockHost();
   const { dom, query, enter } = mount(host.api);
   try {
+    query('#refresh-models').click();
     host.image();
     await until(() => !query('#recognize').disabled);
     query('#recognize').click();
@@ -177,6 +185,7 @@ test('a response for an older screenshot is ignored', async () => {
   const host = mockHost();
   const { dom, query, enter } = mount(host.api);
   try {
+    query('#refresh-models').click();
     enter('#hand-text', '12m');
     host.image();
     await until(() => !query('#recognize').disabled);
@@ -204,10 +213,13 @@ test('local recognition works without uTools or a network request', async () => 
   } finally { dom.window.close(); }
 });
 
-test('local recognition does not call online AI and a manual correction cancels it', async () => {
+test('online controls stay hidden without model discovery and manual edits cancel local recognition', async () => {
   const host = mockHost();
   const { dom, query, enter } = mount(host.api, await localPixels());
   try {
+    for (const selector of ['#model', '#refresh-models', '#recognize']) assert.equal(query(selector).hidden, true);
+    assert.equal(query('#recognize-local').hidden, false);
+    assert.doesNotMatch(query('.source-panel .hint').textContent, /在线|模型/);
     host.image();
     await until(() => !query('#recognize-local').disabled);
     query('#recognize-local').click();
@@ -215,6 +227,7 @@ test('local recognition does not call online AI and a manual correction cancels 
     await until(() => query('#recognition-status').textContent.includes('未覆盖'));
     assert.equal(query('#hand-text').value, '12m');
     assert.equal(host.options(), undefined);
+    assert.equal(host.modelRequests(), 0);
     assert.equal(query('#recognize-local').disabled, false);
   } finally { dom.window.close(); }
 });

@@ -47,11 +47,11 @@ $("#app").innerHTML = `
     <section class="source-panel" aria-label="截图识牌">
       <div class="toolbar">
         <button id="choose-file">选择图片</button><button id="capture">框选截图</button><input id="file" type="file" accept="image/png,image/jpeg,image/webp" hidden/>
-        <button id="recognize-local" class="primary" disabled>本地识牌</button><select id="model" aria-label="在线识牌模型" disabled><option>正在加载模型…</option></select><button id="refresh-models" title="刷新模型列表">刷新</button><button id="recognize" disabled>在线识牌</button>
+        <button id="recognize-local" class="primary" disabled>本地识牌</button><select id="model" aria-label="在线识牌模型" hidden disabled><option>正在加载模型…</option></select><button id="refresh-models" title="刷新模型列表" hidden>刷新</button><button id="recognize" hidden disabled>在线识牌</button>
       </div>
       <div id="dropzone" class="dropzone"><div id="empty-image">拖入或粘贴雀魂 / 天凤截图</div><canvas id="preview" hidden aria-label="手牌截图，拖动框选裁剪区域"></canvas></div>
       <div class="toolbar crop-tools"><button id="crop" hidden>应用裁剪</button><button id="restore-image" hidden>还原图片</button></div>
-      <p class="hint">本地识牌支持雀魂标准、猫咪雀圣、飞鸟与鱼和天凤标准。请先框选横向手牌并应用裁剪，保留完整牌面、排除副露；本地识别不上传图片。点击“在线识牌”才会将当前图片发送给所选模型。</p><p id="recognition-status" role="status" class="status"></p>
+      <p class="hint">本地识牌支持雀魂标准、猫咪雀圣、飞鸟与鱼和天凤标准。请先框选横向手牌并应用裁剪，保留完整牌面、排除副露；本地识别不上传图片。</p><p id="recognition-status" role="status" class="status"></p>
     </section>
     <section class="hand-panel" aria-label="手牌编辑">
       <div class="section-head"><label for="hand-text">手牌</label><span id="tile-count" class="muted">0 张</span><div class="toolbar"><button id="sort">理牌</button><button id="clear">清空</button></div></div>
@@ -609,7 +609,6 @@ host?.onPluginEnter(({ type, payload }) => {
     $("#hand-text").dispatchEvent(new Event("input"));
   }
 });
-void loadModels();
 // Inline bytes also work under the uTools file protocol, without fetch(file://...).
 const engineBytes = Uint8Array.from(atob(engineDataUrl.split(",")[1]), (char) =>
   char.charCodeAt(0),
