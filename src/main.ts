@@ -23,6 +23,7 @@ const host = window.utools;
 let engine: Awaited<ReturnType<typeof loadEngine>>;
 let slots: (Tile | null)[] = [];
 let selected = -1;
+let autoSort = true;
 let discarded: Tile[] = [];
 let history: { tiles: Tile[]; discarded: Tile[] }[] = [];
 let inputError = "";
@@ -47,7 +48,7 @@ $("#app").innerHTML = `
     <header class="page-head"><h1>牌理</h1><p class="hint">直接粘贴截图，自动识牌并计算进张</p></header>
     <p id="recognition-status" role="status" class="status"></p>
     <section class="hand-overview" aria-label="手牌校正">
-      <div class="section-head"><h2>手牌</h2><span id="tile-count" class="muted">0 张</span><div class="toolbar"><button id="sort">理牌</button><button id="clear">清空</button></div></div>
+      <div class="section-head"><h2>手牌</h2><span id="tile-count" class="muted">0 张</span><div class="toolbar"><button id="auto-sort" aria-pressed="true">自动理牌：开</button><button id="clear">清空</button></div></div>
       <div id="hand" class="hand" aria-label="当前手牌"></div>
     </section>
     <div class="workspace">
@@ -104,6 +105,11 @@ function draftText(): string {
 
 /** Synchronize point edits back to the text field and reset any old analysis branch. */
 function syncHand(resetHistory = true): void {
+  if (autoSort) {
+    slots.sort((a, b) =>
+      a === null ? 1 : b === null ? -1 : tileId(a) - tileId(b),
+    );
+  }
   $<HTMLTextAreaElement>("#hand-text").value = slots.includes(null)
     ? draftText()
     : formatTiles(slots as Tile[]);
@@ -434,6 +440,11 @@ $("#hand-text").addEventListener("input", () => {
   renderHand();
   renderAnalysis();
 });
+// Commit sorting after text editing ends so typing does not move the caret.
+$("#hand-text").addEventListener("change", () => {
+  if (autoSort && !inputError)
+    syncHand(false);
+});
 $("#meld-text").addEventListener("input", () => {
   handRevision++;
   history = [];
@@ -473,12 +484,14 @@ $("#delete-tile").onclick = () => {
     syncHand();
   }
 };
-$("#sort").onclick = () => {
-  slots.sort((a, b) =>
-    a === null ? 1 : b === null ? -1 : tileId(a) - tileId(b),
-  );
-  selected = -1;
-  syncHand(false);
+$("#auto-sort").onclick = () => {
+  autoSort = !autoSort;
+  $("#auto-sort").setAttribute("aria-pressed", String(autoSort));
+  $("#auto-sort").textContent = `自动理牌：${autoSort ? "开" : "关"}`;
+  if (autoSort && !inputError && slots.length) {
+    selected = -1;
+    syncHand(false);
+  }
 };
 $("#clear").onclick = () => {
   slots = [];
@@ -626,6 +639,7 @@ host?.onPluginEnter(({ type, payload }) => {
   if (type === "regex") {
     $<HTMLTextAreaElement>("#hand-text").value = payload;
     $("#hand-text").dispatchEvent(new Event("input"));
+    $("#hand-text").dispatchEvent(new Event("change"));
   }
 });
 // Inline bytes also work under the uTools file protocol, without fetch(file://...).

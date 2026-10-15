@@ -52,9 +52,9 @@ function pasteImage(dom) {
 }
 
 /** A real two-tile raster makes the local UI test exercise the actual embedded matching library. */
-async function localPixels() {
+async function localPixels(tiles = ['0s', '5s']) {
   const { data, info } = await sharp({ create: { width: 184, height: 153, channels: 4, background: '#20394f' } })
-    .composite(['0s', '5s'].map((tile, i) => ({ input: new URL(`../assets/recognition-templates/majsoul-standard/${tile}.png`, import.meta.url).pathname, left: 12 + i * 80, top: 12 })))
+    .composite(tiles.map((tile, i) => ({ input: new URL(`../assets/recognition-templates/majsoul-standard/${tile}.png`, import.meta.url).pathname, left: 12 + i * 80, top: 12 })))
     .raw().toBuffer({ resolveWithObject: true });
   return { ...info, data };
 }
@@ -87,6 +87,7 @@ function mockHost() {
       shellOpenExternal() {},
     },
     image: (payload = 'data:image/png;base64,c3ludGhldGlj') => onEnter({ type: 'img', payload }),
+    text: (payload) => onEnter({ type: 'regex', payload }),
     resolve: (content) => resolveAi({ content }),
     options: () => lastOptions,
     modelRequests: () => modelRequests,
@@ -117,6 +118,7 @@ test('production bundle loads inline WASM and all local tile faces without host 
 test('text and point replacement are synchronized; invalid text clears stale results', async () => {
   const { dom, query, enter } = mount();
   try {
+    query('#auto-sort').click();
     enter('#hand-text', '123m45p11z1s');
     await until(() => query('.metrics'));
     assert.equal(query('#tile-editor').open, false);
@@ -132,26 +134,94 @@ test('text and point replacement are synchronized; invalid text clears stale res
   } finally { dom.window.close(); }
 });
 
-test('discard, draw, sort and undo preserve simulation state', async () => {
+/** Preserve typing order until commit and never replace an invalid draft when toggling. */
+test('automatic sorting waits for text commit, toggles immediately and preserves invalid input', async () => {
   const { dom, query, enter } = mount();
   try {
-    enter('#hand-text', '123m45p11z1s');
+    assert.equal(query('#auto-sort').getAttribute('aria-pressed'), 'true');
+    assert.equal(query('#auto-sort').textContent, '自动理牌：开');
+    enter('#hand-text', '9s21m05p5m1z');
+    await until(() => query('.metrics'));
+    assert.equal(query('#hand-text').value, '9s21m05p5m1z');
+    query('#hand-text').dispatchEvent(new dom.window.Event('change'));
+    assert.equal(query('#hand-text').value, '125m05p9s1z');
+    query('#auto-sort').click();
+    assert.equal(query('#auto-sort').getAttribute('aria-pressed'), 'false');
+    assert.equal(query('#auto-sort').textContent, '自动理牌：关');
+    enter('#hand-text', '9s21m05p5m1z');
+    query('#hand-text').dispatchEvent(new dom.window.Event('change'));
+    assert.equal(query('#hand-text').value, '9s21m05p5m1z');
+    query('#auto-sort').click();
+    assert.equal(query('#hand-text').value, '125m05p9s1z');
+    enter('#hand-text', '8z');
+    query('#auto-sort').click();
+    query('#auto-sort').click();
+    query('#hand-text').dispatchEvent(new dom.window.Event('change'));
+    assert.equal(query('#hand-text').value, '8z');
+    assert.match(query('.input-error').textContent, /字牌/);
+  } finally { dom.window.close(); }
+});
+
+test('automatic sorting applies to point replacement, addition and deletion', async () => {
+  const { dom, query, enter } = mount();
+  try {
+    enter('#hand-text', '123m45p1s11z');
+    await until(() => query('.metrics'));
+    query('#hand [data-index="0"]').click();
+    query('#palette [data-pick="9m"]').click();
+    assert.equal(query('#hand-text').value, '239m45p1s11z');
+    query('#palette [data-pick="8m"]').click();
+    assert.equal(query('#hand-text').value, '2389m45p1s11z');
+    query('#hand [data-index="0"]').click();
+    query('#delete-tile').click();
+    assert.equal(query('#hand-text').value, '389m45p1s11z');
+    query('#auto-sort').click();
+    query('#hand [data-index="0"]').click();
+    query('#palette [data-pick="9s"]').click();
+    assert.equal(query('#hand-text').value, '9s89m45p1s11z');
+  } finally { dom.window.close(); }
+});
+
+test('discard, draw, automatic sorting toggle and undo preserve simulation state', async () => {
+  const { dom, query, enter } = mount();
+  try {
+    enter('#hand-text', '123m45p1s11z');
     await until(() => query('.metrics'));
     query('[data-discard="0"] img').click();
     const afterDiscard = query('#hand-text').value;
     const known = query('#simulation').textContent;
     assert.equal(query('#tile-count').textContent, '7 张');
-    query('#sort').click();
+    query('#auto-sort').click();
+    query('#auto-sort').click();
     assert.equal(query('#simulation').textContent, known);
     query('[data-draw] img').click();
     assert.equal(query('#tile-count').textContent, '8 张');
     query('#undo').click();
     assert.equal(query('#tile-count').textContent, '7 张');
     query('#undo').click();
-    assert.equal(query('#hand-text').value, '123m45p11z1s');
+    assert.equal(query('#hand-text').value, '123m45p1s11z');
     assert.equal(query('#simulation').textContent, '');
     assert.equal(query('#undo').disabled, true);
-    assert.notEqual(afterDiscard, '123m45p11z1s');
+    assert.notEqual(afterDiscard, '123m45p1s11z');
+  } finally { dom.window.close(); }
+});
+
+test('recognition and uTools text entry respect the automatic sorting switch', async () => {
+  const host = mockHost();
+  const { dom, query } = mount(host.api, await localPixels(['5s', '1m']));
+  try {
+    host.image();
+    await until(() => query('#hand-text').value === '1m5s');
+    query('#auto-sort').click();
+    host.image();
+    await until(() => query('#hand-text').value === '5s1m');
+    query('#auto-sort').click();
+    assert.equal(query('#hand-text').value, '1m5s');
+    host.text('9s21m');
+    assert.equal(query('#hand-text').value, '12m9s');
+    query('#auto-sort').click();
+    host.text('9s21m');
+    assert.equal(query('#hand-text').value, '9s21m');
   } finally { dom.window.close(); }
 });
 

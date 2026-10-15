@@ -95,6 +95,15 @@ summary:focus-visible {
   padding-bottom: 12px;
   border-bottom: 1px solid #e5e5e5;
 }
+#auto-sort[aria-pressed="true"] {
+  background: #333;
+  border-color: #333;
+  color: #fff;
+}
+#auto-sort[aria-pressed="true"]:hover {
+  background: #111;
+  border-color: #111;
+}
 .workspace {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
