@@ -1,0 +1,29 @@
+{
+  "name": "猫咪雀圣 / Cat Saint",
+  "downloaded_on": "2026-10-15",
+  "source": "雀魂官方网页版公开游戏资源",
+  "resource_directory": "scene/Assets/Resource/mjpaimian/mjpface_2308event/",
+  "manifest_url": "https://game.maj-soul.com/1/resversion0.11.252.w.json",
+  "resource_prefix": "v0.10.261.w",
+  "processing": "原始 PNG 文件，未裁剪、缩放或重新编码",
+  "files": [
+    {
+      "file": "hand.png",
+      "description": "完整手牌视角图集，包含万、筒、索、字牌及赤五",
+      "width": 800,
+      "height": 516,
+      "bytes": 35315,
+      "sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+      "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png"
+    },
+    {
+      "file": "mjp.png",
+      "description": "3D 麻将牌正面的纹理图集",
+      "width": 400,
+      "height": 400,
+      "bytes": 47155,
+      "sha256": "733c4f38e05012a1a8d8469405b8ddc52c9c9d8152746bcef55f32b5fea7eb24",
+      "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/mjp.png"
+    }
+  ]
+}

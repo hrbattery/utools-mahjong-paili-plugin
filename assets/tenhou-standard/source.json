@@ -1,0 +1,229 @@
+{
+  "name": "天凤标准",
+  "source": "https://cdn.tenhou.net/2/t/",
+  "processing": "保留原始 GIF 字节",
+  "files": [
+    {
+      "tile": "1m",
+      "url": "https://cdn.tenhou.net/2/t/1m.gif",
+      "file": "tiles/1m.gif",
+      "sha256": "090a46b5e25926b6e060143043d5b44395ad0e6c82db8ef0eed0f9cc710ace51"
+    },
+    {
+      "tile": "2m",
+      "url": "https://cdn.tenhou.net/2/t/2m.gif",
+      "file": "tiles/2m.gif",
+      "sha256": "4d5d26605f097e5342e06e10362974361171b0c025d633e6ee81ed07f988db4d"
+    },
+    {
+      "tile": "3m",
+      "url": "https://cdn.tenhou.net/2/t/3m.gif",
+      "file": "tiles/3m.gif",
+      "sha256": "cabed5b865606e193b40d1156ec18c9924afda9a7c583ff4e102cf5737f53207"
+    },
+    {
+      "tile": "4m",
+      "url": "https://cdn.tenhou.net/2/t/4m.gif",
+      "file": "tiles/4m.gif",
+      "sha256": "937b61ba6b04fbddf6c9a098fcca44ccb0f63b2e3f9002d7c927abd3f6987a16"
+    },
+    {
+      "tile": "5m",
+      "url": "https://cdn.tenhou.net/2/t/5m.gif",
+      "file": "tiles/5m.gif",
+      "sha256": "7eb73f08c82066c6dc5e82c3822b84e4c75c7434193f491c3b0b9b24b29d313b"
+    },
+    {
+      "tile": "6m",
+      "url": "https://cdn.tenhou.net/2/t/6m.gif",
+      "file": "tiles/6m.gif",
+      "sha256": "5145f74e2bf9d4c305484a6a59f540f21c441d5f77994ce8b002aa882930fd34"
+    },
+    {
+      "tile": "7m",
+      "url": "https://cdn.tenhou.net/2/t/7m.gif",
+      "file": "tiles/7m.gif",
+      "sha256": "21387b59520795328d96eee05f88a8a1fadce475f01c57efefd7998a547ac85d"
+    },
+    {
+      "tile": "8m",
+      "url": "https://cdn.tenhou.net/2/t/8m.gif",
+      "file": "tiles/8m.gif",
+      "sha256": "9c275de09259bdc0e6e35463f39bb9c80db5685a2a7d16b5d61ac78df1cea1ef"
+    },
+    {
+      "tile": "9m",
+      "url": "https://cdn.tenhou.net/2/t/9m.gif",
+      "file": "tiles/9m.gif",
+      "sha256": "537cea0c04b29000000ac937288b2d692d3b8ca883f6f6ae41cd80cc500f9d68"
+    },
+    {
+      "tile": "1p",
+      "url": "https://cdn.tenhou.net/2/t/1p.gif",
+      "file": "tiles/1p.gif",
+      "sha256": "f24fa05319b2340525cc39c19c18b14d9fbca0093a23b6d9f9db753a0397e5ed"
+    },
+    {
+      "tile": "2p",
+      "url": "https://cdn.tenhou.net/2/t/2p.gif",
+      "file": "tiles/2p.gif",
+      "sha256": "6fc5e65e9b32c0d9dd959121e9f53d53a2175ee5d752c01ae0045c8e09fc5a2f"
+    },
+    {
+      "tile": "3p",
+      "url": "https://cdn.tenhou.net/2/t/3p.gif",
+      "file": "tiles/3p.gif",
+      "sha256": "2fd2c338b61298bb8434fad061aeacecd4c3daf76aaf7487184d468ab6c106f3"
+    },
+    {
+      "tile": "4p",
+      "url": "https://cdn.tenhou.net/2/t/4p.gif",
+      "file": "tiles/4p.gif",
+      "sha256": "e0b551c47546a8326272a115e9761522be94d7444db3ec52e5c537eac34261b6"
+    },
+    {
+      "tile": "5p",
+      "url": "https://cdn.tenhou.net/2/t/5p.gif",
+      "file": "tiles/5p.gif",
+      "sha256": "642bf1464822b0f426bd7745d69b0df14ae5bc235f748e5eae052226cbaa7f34"
+    },
+    {
+      "tile": "6p",
+      "url": "https://cdn.tenhou.net/2/t/6p.gif",
+      "file": "tiles/6p.gif",
+      "sha256": "c8026578402d52b6756da48c9462ca4219ebf8ce664a36e9df42f72f89775ff7"
+    },
+    {
+      "tile": "7p",
+      "url": "https://cdn.tenhou.net/2/t/7p.gif",
+      "file": "tiles/7p.gif",
+      "sha256": "907afad3186d0ae5250e687ca0979e22569d52003f40eb6d7a250eaf639e6435"
+    },
+    {
+      "tile": "8p",
+      "url": "https://cdn.tenhou.net/2/t/8p.gif",
+      "file": "tiles/8p.gif",
+      "sha256": "a9fcd0ac1cd333a401553c602b7bddb7a7b570bf344e0721a27bf1ba1d1db57f"
+    },
+    {
+      "tile": "9p",
+      "url": "https://cdn.tenhou.net/2/t/9p.gif",
+      "file": "tiles/9p.gif",
+      "sha256": "887bbb4cb7a5b3b660071d2e43d3f38dda52804efec623051aa93d4a099ebda5"
+    },
+    {
+      "tile": "1s",
+      "url": "https://cdn.tenhou.net/2/t/1s.gif",
+      "file": "tiles/1s.gif",
+      "sha256": "d918957097e4f567af27a8ee60b739f7b46a73d73a8f1735710b5e274f23217c"
+    },
+    {
+      "tile": "2s",
+      "url": "https://cdn.tenhou.net/2/t/2s.gif",
+      "file": "tiles/2s.gif",
+      "sha256": "3eb5735a956063cfdd409d9ef6d8ef09b112f93c79330135848c35cd5f38b198"
+    },
+    {
+      "tile": "3s",
+      "url": "https://cdn.tenhou.net/2/t/3s.gif",
+      "file": "tiles/3s.gif",
+      "sha256": "9a33dc4cf4505a1efbfe790503e6bc60372546d86c3b2d48fbcd2ca539b017f9"
+    },
+    {
+      "tile": "4s",
+      "url": "https://cdn.tenhou.net/2/t/4s.gif",
+      "file": "tiles/4s.gif",
+      "sha256": "f2e8518087b0b3c713544b74478eaab052dc1b966c485aa7dd0211c7f0d3b6dc"
+    },
+    {
+      "tile": "5s",
+      "url": "https://cdn.tenhou.net/2/t/5s.gif",
+      "file": "tiles/5s.gif",
+      "sha256": "4fada830fbdc8e447b5d327226b0d1736ac0584b501eed1509562a32f7420ae9"
+    },
+    {
+      "tile": "6s",
+      "url": "https://cdn.tenhou.net/2/t/6s.gif",
+      "file": "tiles/6s.gif",
+      "sha256": "b3fc8d19e06220378071af57181849a6abdef9779d2835c902bf78f49a298062"
+    },
+    {
+      "tile": "7s",
+      "url": "https://cdn.tenhou.net/2/t/7s.gif",
+      "file": "tiles/7s.gif",
+      "sha256": "7d439dee0b7f24637c2d25ef0d499ac372179b0406b8870597d6867016003fa5"
+    },
+    {
+      "tile": "8s",
+      "url": "https://cdn.tenhou.net/2/t/8s.gif",
+      "file": "tiles/8s.gif",
+      "sha256": "3f4b9793a03300de2d78f51054935766cfaf5ed238de9ffe151233d9a873c371"
+    },
+    {
+      "tile": "9s",
+      "url": "https://cdn.tenhou.net/2/t/9s.gif",
+      "file": "tiles/9s.gif",
+      "sha256": "cb4e1e18a90368a7714443170f8ad38744a9871fd69bc800604ec056eb582551"
+    },
+    {
+      "tile": "1z",
+      "url": "https://cdn.tenhou.net/2/t/1z.gif",
+      "file": "tiles/1z.gif",
+      "sha256": "c293844457d2c0b80e1b14c5885c1801c8e5e344d8d0acec0ba905f3d960dc29"
+    },
+    {
+      "tile": "2z",
+      "url": "https://cdn.tenhou.net/2/t/2z.gif",
+      "file": "tiles/2z.gif",
+      "sha256": "cef2ef4e53b4e6b993e429dcaf4e84584bf0c834cf74be3770855f94e78104c7"
+    },
+    {
+      "tile": "3z",
+      "url": "https://cdn.tenhou.net/2/t/3z.gif",
+      "file": "tiles/3z.gif",
+      "sha256": "cf003f603fb9c818f30373a0a07fd57cfa90f15435126802a2b0898a99f3e1ab"
+    },
+    {
+      "tile": "4z",
+      "url": "https://cdn.tenhou.net/2/t/4z.gif",
+      "file": "tiles/4z.gif",
+      "sha256": "91802b594813fa5b18ba4d385ba4103e68bfb49f78b73ba6010edbb61c02d4c4"
+    },
+    {
+      "tile": "5z",
+      "url": "https://cdn.tenhou.net/2/t/5z.gif",
+      "file": "tiles/5z.gif",
+      "sha256": "f9ce615bcfcc4f2529f77832ab71e47dbb214b4eb221c69d5d830de5b1d0e638"
+    },
+    {
+      "tile": "6z",
+      "url": "https://cdn.tenhou.net/2/t/6z.gif",
+      "file": "tiles/6z.gif",
+      "sha256": "2a728d881426144e9bdd9d157a9af142b77db7cc690b3a3df9463bd7840652e6"
+    },
+    {
+      "tile": "7z",
+      "url": "https://cdn.tenhou.net/2/t/7z.gif",
+      "file": "tiles/7z.gif",
+      "sha256": "63d612358843849c9d06f19118ce92b5353687c4408cd21abaa489e52ced0c4b"
+    },
+    {
+      "tile": "0m",
+      "url": "https://cdn.tenhou.net/2/t/0m.gif",
+      "file": "tiles/0m.gif",
+      "sha256": "89bf8c5a470b9013d9d94e2d02bf74054013a733bac9ff6a6426b1f21bf42ed0"
+    },
+    {
+      "tile": "0p",
+      "url": "https://cdn.tenhou.net/2/t/0p.gif",
+      "file": "tiles/0p.gif",
+      "sha256": "28034b7cc95543f7dd2258d5e63034d4ed55fb0cb4d78d4e896617bf859e15dd"
+    },
+    {
+      "tile": "0s",
+      "url": "https://cdn.tenhou.net/2/t/0s.gif",
+      "file": "tiles/0s.gif",
+      "sha256": "e94ff0c216e006db7c1c414f6851e2f6840ddbc16596c96778447c1ea8fde152"
+    }
+  ]
+}

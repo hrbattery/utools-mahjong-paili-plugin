@@ -1,0 +1,14 @@
+{
+  "name": "雀魂标准",
+  "source": "用户下载的 riichi.moe tiles 目录",
+  "source_path": "tiles/discard tiles/mjp_default/hand.png",
+  "processing": "保留原始 PNG 字节",
+  "files": [
+    {
+      "file": "hand.png",
+      "width": 800,
+      "height": 516,
+      "sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127"
+    }
+  ]
+}

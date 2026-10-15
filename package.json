@@ -10,6 +10,10 @@
     "test:ui": "npm run build && node --test tests/ui.test.mjs",
     "samples:tenhou": "node scripts/create-tenhou-samples.ts",
     "samples:majsoul": "node scripts/prepare-majsoul-samples.ts",
+    "templates:prepare": "node scripts/prepare-recognition-templates.ts",
+    "test:recognition-samples": "node scripts/evaluate-local-recognition.ts",
+    "test:recognition-real": "node scripts/review-real-screenshots.ts",
+    "test:recognition-holdout": "node scripts/review-real-screenshots.ts --holdout",
     "build:engine": "cargo build --manifest-path engine/Cargo.toml --target wasm32-unknown-unknown --release && node scripts/copy-engine.mjs"
   },
   "devDependencies": {

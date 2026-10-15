@@ -1,0 +1,2666 @@
+[
+  {
+    "tile": "1m",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/1m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "022b794ea3cf177878ed3614b39e16f98aab9b2ba00cababffe00940c9a6a38c",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 0,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2m",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/2m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "cd8b417b0088314c20ed20d67e0a76879d63b09bb645aa19eaab3f979ef36e70",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 80,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3m",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/3m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "3219d2db287d4b58d6fcb42b9a6e6a77cbdf3f26935bff940831f883c4ed6ee8",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 160,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4m",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/4m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "647334128f6e45a1404b0db413e7502dcff4c14086785b3723e74ce6b08689a2",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 240,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5m",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/5m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "707c2dbd35760c2526d0ad06232431b902277113398c0431e99277d7b7185900",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 320,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6m",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/6m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "06676d93600344269208de2d8a399653c4f3fef5948d40e459cb369aa01a9cd5",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 400,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7m",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/7m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "a1ddc75cedb7fde85a06896623f78596c041818eaf943aeb2da5f7c91fc6fe0c",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 480,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "8m",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/8m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "091e929e34a29234ea4092c0562eb8734c5606707dac9345e0651d7e6d43927e",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 560,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "9m",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/9m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "2b0f5fa5ccd0c80d37e71278609bc7930a98a0e8fae347baa0a73e45f7588c46",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 640,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1p",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/1p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "210b92160f16534ecd24cb55473fd2bd1659dedf69f96b846b62cc481d116133",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 0,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2p",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/2p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "bc5dd5ad5af2338f888888920ac81496bf3ed894db0095cfd3c6aeaade15e109",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 80,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3p",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/3p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "66ca0215aadb90892c777e256d39c418274ecd0a0a5c3db5513dadcb065a8523",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 160,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4p",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/4p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "3c94b0043b895fd727f1c8e1be95408d2cb6c2421b43a5830b2f5d5698e74d9b",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 240,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5p",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/5p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "540dee9b3380799b1d10ccae0266023fe49d1a7693f9c24d257d547ed961bfc7",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 320,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6p",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/6p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "62bd164fbbc86ca63681dc3b332d4b5b4e88b152b075cbf04bb0f95d3459bcd3",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 400,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7p",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/7p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "b66a05ef3667e9863f49ff6a6c53bc9cf5c23549a179f9781345840dadfdbd75",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 480,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "8p",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/8p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "8b935eca86492d7dba46c1e1f44926e69365b34373e2d1ef64bd439640867fe1",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 560,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "9p",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/9p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "a568e9051f9df76e03bc957130e2a41091dac8b9ea336995aa1e55497c4a6890",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 640,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1s",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/1s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "bf32fb7ee5e55ed60dd6b91b610ecf2e6cb49b8de2ea992258a40af070f178a2",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2s",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/2s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "27d28c640992c322e1188e015e5971b180f5bf43b071da902691db1dab83066e",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 80,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3s",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/3s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "412e6fc1c5159e3d177f663e1c9cb790b1e6f47d2816fe4254c02e300d718389",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 160,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4s",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/4s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "5c7d6c84501b817631adbd56c7715ad064ec1105fb827bdda5dbdd1bdf11549c",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 240,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5s",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/5s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "99b17a339a66fac4fc2655f80ae97d58dc8dfd6fd95ac0a63992a9db045f92c6",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 320,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6s",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/6s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "6a9accbbb7bed54a704507b1209fcdc1036096ffaf2a83be803649fcd48fad86",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 400,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7s",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/7s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "498037d94a63c22062b59cd84e7ab93fc2221f090c339f9546cc1e0b375ff15e",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 480,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "8s",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/8s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "b779e92ff319f6a179c0366fa37012568fc08184f7fe0c2bdf0eff879ce64caf",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 560,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "9s",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/9s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "9d916a038e49cab52a245098d87919c6ff199f0ff9bfe635dfd7aaad558e277f",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 640,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1z",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/1z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "9de91873fcddb3eaf529fcf52ad72ee783f70cac5c15ca0b686dcd11d43933f3",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 0,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2z",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/2z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "32ac656c8ceaa8d2aade49b9544f30970bdde6057bc8ed14d8ce8a122d73c376",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 80,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3z",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/3z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "d30deedaa8d5a729c7a6e60977964273e46019cf8e727eb75e94de6161b90d95",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 160,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4z",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/4z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "f342762b097a8f1d47e1707f5717d0d82f270a6d9bd5b631fbb43a077a0cf152",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 240,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5z",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/5z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "8f34ee543a64549ece78142503586a98344bd0c05b3d8c482c74f0a102c81ca9",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 320,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6z",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/6z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "bdae5236681f21c4a23a3e4022a63e4e5648fcab25b0a8bf152aa8976d2c5309",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 400,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7z",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/7z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "3a078eaf3ad5ebea71e391c2aee5e6fb8937b64f40e1c0235118341f40dde159",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 480,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "0m",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/0m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "7803ea78d3fcfbf4ab183308bbb0c694ea34547c149b3330c8487bef464c86ca",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 720,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "0p",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/0p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "dae7f84d115455c948cfc5991c98becca19e91152f61b275b6dffee05cb36d58",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 720,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "0s",
+    "skin": "majsoul-standard",
+    "name": "雀魂标准",
+    "file": "majsoul-standard/0s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "17a105e1073127ca8eec1a83145bcd451bc91b0151e787e589b8f168275ef56d",
+    "source_file": "assets/majsoul-standard/hand.png",
+    "source_sha256": "8bd37a42ca873b7ee49e6f6040843d5cdce142edfe067eb95c9e618ff0531127",
+    "source_url": null,
+    "source_box": {
+      "left": 720,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1m",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/1m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "d81622fdcde18d6de401d976de8ff6fee9dae6c478bf5197e668da88a7c068b4",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 80,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2m",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/2m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "5664eb0aebf964ff4cb425bcacc8860d488a82ebdc6f148379f21bebc7ae8fc6",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 160,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3m",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/3m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "dccc4b9386b8f4ae886872edaf72b51628d889213594468e257da01aee0218ab",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 240,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4m",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/4m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "4b26c5ee91d640336fa93d53eaaea5aa88bdeb59d7a87663e46f04b307d954e1",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 320,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5m",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/5m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "b8a33401179c9a36a6236ea9ce78c12c19ce2eadbe6d3de098aa375a77030ab5",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 400,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6m",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/6m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "f1ccd75fd99743f0aebf8dd3b18c2a078690c08f4d1ceb21659da5330460672d",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 480,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7m",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/7m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "70cd6a5f59fd87e3670658f3182195a67a86dd545e8eaf549e0c4bb2220dbb6a",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 560,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "8m",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/8m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "383b986ade1a60776d4653b7bb213199a45ce912cd8391f7a329c04a5e0980cb",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 640,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "9m",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/9m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "fa6c5c540e92d58f3816edab4290feab9d20d3a94682c565d5bb387ea0cef822",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 720,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1p",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/1p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "1f642908f2b01b849333d416785134ad3866e5b35165635aac942d16ab089ef7",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 80,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2p",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/2p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "4eaf9174cb97ef6b2aadb3e2579c0d6f2bccfd7e9f74bee6df6625185cfee278",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 160,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3p",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/3p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "26612b94723131c119ce130c06af970bec3f09ae20584b45b7211f15692a28a3",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 240,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4p",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/4p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "e90b6e329ffe143ee7662d1f6204e12df3cfc46e598fc0b3e4d5e81ee2e36812",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 320,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5p",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/5p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "72533202eb80ebb2dd1b3611b17b799dac8e5859b424acc879dec58249df27c9",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 400,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6p",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/6p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "87ac719158faaa48b5d1095b9ae0b212b1e761b38fd15e4f5e82d01c878b9d53",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 480,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7p",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/7p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "0fe0fa3f28af9399cfed0aaca3ad11b826ca7418cdf1e65950a5f822cbf11db6",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 560,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "8p",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/8p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "583450d763d5540cc45fdf9bb3af2102c25ff344a0a5f030ca67d6bc360f49b7",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 640,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "9p",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/9p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "92ffdafff2dd482c34a41aa1838f141cdad2f33c22ed1e3ec7377776529f9be5",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 720,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1s",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/1s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "6bc36e7e50374597efce82365536531262297dc62fe0ae6cce135414db2af1e5",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 80,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2s",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/2s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "a000bae94cde88c362f2ac5492bac1585a6bdcd1e8df6415ac655e6ec30124ca",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 160,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3s",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/3s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "1ed658178ab19a162316546604b8743ab9161411ce746810b14345b1e8a1947d",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 240,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4s",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/4s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "18813cea68867a3079f81f6323c13c365732f48f7d4e33a9f8d4c98a21a43ab5",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 320,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5s",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/5s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "d3bee365c8c466a993f4d945284d1fc83e7810ce6ddeacf98e03f11296cc4971",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 400,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6s",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/6s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "f5d4c849109164738845c8b57dbd02534ebfa84efe4d55c2eed007b3da419fc8",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 480,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7s",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/7s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "e28edd8d08ad71fc8c578e04a74fb65b35176d3dcfc15c9bc750567818d31edc",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 560,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "8s",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/8s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "a0abf8304edc8d3c43463f92985b8a7adffe51fae30c8f3e80c910f851498157",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 640,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "9s",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/9s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "a74c4528f21156f2e8bdc612aa95bc5812666e1be85ce8cba6d02f032523fa5c",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 720,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1z",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/1z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "3e63dbe29edea2306bfd9656f65720c45581a8815478e100c68e33054853ed1b",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 0,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2z",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/2z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "74d5da62336819d18b63625fe3e1e072cef306587caaaa43410e7231ad78ac01",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 80,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3z",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/3z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "dc4fae2942ab0a036697e62eb146d1a2814fc8a717b5724533933c08213c996b",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 160,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4z",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/4z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "8c66e96d9c6760fe05cd70cd3c39e7fa0f8eed91aa1a5ab3ccc455f4537d4202",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 240,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5z",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/5z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "00e368026c1175c50ac23776a84039224c0cb403d2d2e52d460adbec3e16dd49",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 320,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6z",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/6z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "fec3849db565fb55bdbab0c0e35fe431145b063e8ae7400e0520d613cef81335",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 400,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7z",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/7z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "1dbd40209159343ebd078f8f4e0dca1788d37991161a1634b922c234bf2d1c20",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 480,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "0m",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/0m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "3a62c9e176ccd067f6bddf6c40d8a0df55dda6110a64383b2ce6bd66c4e1d808",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 0,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "0p",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/0p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "210bd678ab953370e005c3437a6b645a6d7e402834060841c240a061beecd874",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 0,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "0s",
+    "skin": "majsoul-cat-saint",
+    "name": "猫咪雀圣",
+    "file": "majsoul-cat-saint/0s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "9513c8011515f3e2c3a51bd663dd18fed054b6506e91000abaa3f27a95dcbe95",
+    "source_file": "assets/majsoul-cat-saint/hand.png",
+    "source_sha256": "49bf01a8b0ee252e78bb77c88afb8f6914e453d20adc0a921d8d1d05ad2fee8d",
+    "source_url": "https://game.maj-soul.com/1/v0.10.261.w/scene/Assets/Resource/mjpaimian/mjpface_2308event/hand.png",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1m",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/1m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "9a79b8436b4c12763132cffa2af43d2d523bb552266573a60060d41590f10923",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 80,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2m",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/2m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "91645f2f4c080147b4b796145021d5068772476fcda4711243a4de8449b06f58",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 160,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3m",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/3m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "1c059c7be1aa2a3b39dc4e7d29b7e6ec6d712bc77dcfc35a771bec61f8a434e1",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 240,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4m",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/4m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "f1aff75796f170f8631cee0e701ef2210cc696124ab8a020496586b2b061350a",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 320,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5m",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/5m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "1dd6bbf5fee9d96973885493defe98bdcf6f098e5f1f0b14ff4597a36e84fa2c",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 400,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6m",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/6m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "f1b850e2c0385bed8e61a85586e6da61db09264b0a212948f6e1df115109b489",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 480,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7m",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/7m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "461036573001a95a89da86a09307db1729f05fa00a4d3cc87484655c6344a405",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 560,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "8m",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/8m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "f5e9332c8b4fa1d5ccfd1defd6e241d3552f0b0c818d0028441b14dc9d21e3d5",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 640,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "9m",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/9m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "d3abbfcc861c3ba5dcf778ab164f4c6ef80e6b4199e50b0f436b00061e848e2e",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 720,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1p",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/1p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "01bc4e4ff93540737549ffe4629724632a96152d6716964cbc8376447a9545ad",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 80,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2p",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/2p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "e5bc539530b3ea19e1b16b6a4b17e79485ad7b63a80edb63f9be365a2e0df751",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 160,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3p",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/3p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "8a5226f6dd8effecbe528a53f561d3f7a77b9609a0ba1af1a02b41b8892e05fa",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 240,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4p",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/4p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "7f711b6fbe1e1493dd4dabc0acb1023feeac607312130bd7e73a6afdfc08ea2d",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 320,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5p",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/5p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "155414af9ffe888e05cd075d5176885ae2148afb3b0ac686913c7cf2afd9015f",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 400,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6p",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/6p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "24bd8e9c3e404b2e0bcce5c7ed0ef910d1a73bece5e7c53fc916a95e1b9aa34a",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 480,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7p",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/7p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "41b8172894d899ca64ef75d6549239392bc9bf74f5166f5917f6f1c71ad0e9b0",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 560,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "8p",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/8p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "e77824c08ab043671b0efac242bb96e1045d450670d2a5ff3df8d4fd544bb369",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 640,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "9p",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/9p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "ffb57951abed8e7651082ff1e21452cf53194036d2fa8b2477e250042a8c7962",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 720,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1s",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/1s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "2b38283f586d5f97fdc070e443f01726dd2f1adf30b041b5071e0b1e23d0f20f",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 80,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2s",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/2s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "f410699d96a09a7d44731c5fa94b2fe24f36e64140ab4cb40db6ede48af1c36d",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 160,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3s",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/3s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "d0935d2544894ec1e82c5b409097731e495b9d65f8266cc5d831f5f7dbc9f903",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 240,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4s",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/4s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "45597d9249f3f6a04ee0cc3e136f34a4adb3486b92ee7a775823d54b66750e49",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 320,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5s",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/5s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "2a25aaaf4e5d733ab556cd89aa90622f8ff05a823c5487fb18b0e3fd64c7e7bc",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 400,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6s",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/6s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "3416abda6740808139f8bd275610070ab707f9e9be8dd304239123424a85d359",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 480,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7s",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/7s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "c030e9da5b10fae8b9e81e2c2e8ceb35041b5107b0a56e90b3a4a76ee1db966a",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 560,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "8s",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/8s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "a8fb24eae9dfc863ad1938db92eb3f12a9dbe72130042f3fefc797468960b850",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 640,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "9s",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/9s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "8f09652c7b5b4c4a9ede3b426652060ff72de38deab6419e3870356bc85bddee",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 720,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1z",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/1z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "717012dc75b361cfe4c4451320d08f72b60aa3d425b7d8ba6ae8193e93ac46b8",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 0,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "2z",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/2z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "29eb9a4e4546312db0a5f4c70a60ba1f809f3ba4d5c0017f2e4a7e846702cb44",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 80,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "3z",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/3z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "107baa0255f34db0b9c68a6c65ffc303772739ccd254fa42246c16192683e0c0",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 160,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "4z",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/4z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "b87fd0b4f510a9dd0f689dd841838c92a85edddac043668923035d898ff77bbc",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 240,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "5z",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/5z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "341cfe1291ce6eadfd0d8180fc3c5afdf1b7e22d664e5e7c55f70b65f239440d",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 320,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "6z",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/6z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "c72687031f91ff3052a45546561e9744c3b196ffb46d8175ac06d95e8005ed47",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 400,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "7z",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/7z.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "06157842dc6f5d8fdd68638ebbf9e0695f40ccc33a8f1728a4cd8ba3fbfc0dda",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 480,
+      "top": 387,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "0m",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/0m.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "7f3712096e426477ad461108399b581a194c127388d6d3ce9e568f80aaffc17f",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 0,
+      "top": 129,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "0p",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/0p.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "fa10ae8fa8982716d28ce3f080df65451982f0c2cd471161e35853eab73c7d7d",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 0,
+      "top": 258,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "0s",
+    "skin": "majsoul-birdie-fishie",
+    "name": "飞鸟与鱼",
+    "file": "majsoul-birdie-fishie/0s.png",
+    "width": 80,
+    "height": 129,
+    "sha256": "bd6b44b1273d02c5ad0aa39641603ec6053fca16b8233261b8c15182fd6ad4c0",
+    "source_file": "assets/majsoul-birdie-fishie/hand.png",
+    "source_sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+    "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 80,
+      "height": 129
+    }
+  },
+  {
+    "tile": "1m",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/1m.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "299f67386eeff1cc4a4a3e990636a9928364cea14be279c80ebf787a965221bb",
+    "source_file": "assets/tenhou-standard/tiles/1m.gif",
+    "source_sha256": "090a46b5e25926b6e060143043d5b44395ad0e6c82db8ef0eed0f9cc710ace51",
+    "source_url": "https://cdn.tenhou.net/2/t/1m.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "2m",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/2m.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "006c1acfba8da06fa654ca805ddcdd9e9d39761493259b5d9410a44f30c24f24",
+    "source_file": "assets/tenhou-standard/tiles/2m.gif",
+    "source_sha256": "4d5d26605f097e5342e06e10362974361171b0c025d633e6ee81ed07f988db4d",
+    "source_url": "https://cdn.tenhou.net/2/t/2m.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "3m",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/3m.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "cb6fb629a022213b4208643e6d877de528654c79e20ce1abf7f238e4fd3acf11",
+    "source_file": "assets/tenhou-standard/tiles/3m.gif",
+    "source_sha256": "cabed5b865606e193b40d1156ec18c9924afda9a7c583ff4e102cf5737f53207",
+    "source_url": "https://cdn.tenhou.net/2/t/3m.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "4m",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/4m.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "0c44478f050f526a602ed577b1cbb9c1d77eb8d3e474bea5773eadc0be099432",
+    "source_file": "assets/tenhou-standard/tiles/4m.gif",
+    "source_sha256": "937b61ba6b04fbddf6c9a098fcca44ccb0f63b2e3f9002d7c927abd3f6987a16",
+    "source_url": "https://cdn.tenhou.net/2/t/4m.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "5m",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/5m.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "1df3b6f2a751cb12a209512816b89683baab5b6d0072c99d1da3fd784c39fce0",
+    "source_file": "assets/tenhou-standard/tiles/5m.gif",
+    "source_sha256": "7eb73f08c82066c6dc5e82c3822b84e4c75c7434193f491c3b0b9b24b29d313b",
+    "source_url": "https://cdn.tenhou.net/2/t/5m.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "6m",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/6m.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "3fd46d8a9ccbb1fbfa03fb32a5f6575bf381b55c57f4b4295149c6c8a8174e05",
+    "source_file": "assets/tenhou-standard/tiles/6m.gif",
+    "source_sha256": "5145f74e2bf9d4c305484a6a59f540f21c441d5f77994ce8b002aa882930fd34",
+    "source_url": "https://cdn.tenhou.net/2/t/6m.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "7m",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/7m.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "13647c86a5c5c358d56a1cec6be3b99607131727f1a76be9f31cd5f525280f44",
+    "source_file": "assets/tenhou-standard/tiles/7m.gif",
+    "source_sha256": "21387b59520795328d96eee05f88a8a1fadce475f01c57efefd7998a547ac85d",
+    "source_url": "https://cdn.tenhou.net/2/t/7m.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "8m",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/8m.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "3862cc8f11fc8b58f08f79bb57da9c08d3062f315fbed140caa7ee24700e2c68",
+    "source_file": "assets/tenhou-standard/tiles/8m.gif",
+    "source_sha256": "9c275de09259bdc0e6e35463f39bb9c80db5685a2a7d16b5d61ac78df1cea1ef",
+    "source_url": "https://cdn.tenhou.net/2/t/8m.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "9m",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/9m.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "d5d96384bfa7b4e70b2ccee8b311321cbda2342653afad3800c6f86732d5db48",
+    "source_file": "assets/tenhou-standard/tiles/9m.gif",
+    "source_sha256": "537cea0c04b29000000ac937288b2d692d3b8ca883f6f6ae41cd80cc500f9d68",
+    "source_url": "https://cdn.tenhou.net/2/t/9m.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "1p",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/1p.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "31a5126a9db954b441c7b07a47a42ed3961afaf960de4385588398d5f7464851",
+    "source_file": "assets/tenhou-standard/tiles/1p.gif",
+    "source_sha256": "f24fa05319b2340525cc39c19c18b14d9fbca0093a23b6d9f9db753a0397e5ed",
+    "source_url": "https://cdn.tenhou.net/2/t/1p.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "2p",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/2p.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "798dd01074574f4091913a6b096f504905ec0eb4603fce242868c219c3b64820",
+    "source_file": "assets/tenhou-standard/tiles/2p.gif",
+    "source_sha256": "6fc5e65e9b32c0d9dd959121e9f53d53a2175ee5d752c01ae0045c8e09fc5a2f",
+    "source_url": "https://cdn.tenhou.net/2/t/2p.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "3p",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/3p.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "380d49b5661d5ebfec8185714de58e18bb39693d040cefdbfbd773b854f04787",
+    "source_file": "assets/tenhou-standard/tiles/3p.gif",
+    "source_sha256": "2fd2c338b61298bb8434fad061aeacecd4c3daf76aaf7487184d468ab6c106f3",
+    "source_url": "https://cdn.tenhou.net/2/t/3p.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "4p",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/4p.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "28c508b08be25aeb0e3f2441fb62085eee6fa58a5ea5bef91b9212a69a18dc72",
+    "source_file": "assets/tenhou-standard/tiles/4p.gif",
+    "source_sha256": "e0b551c47546a8326272a115e9761522be94d7444db3ec52e5c537eac34261b6",
+    "source_url": "https://cdn.tenhou.net/2/t/4p.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "5p",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/5p.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "09339b4f179f4725a6e973717d23bdb200b83e0e176e18ebf424db31ea7e67b3",
+    "source_file": "assets/tenhou-standard/tiles/5p.gif",
+    "source_sha256": "642bf1464822b0f426bd7745d69b0df14ae5bc235f748e5eae052226cbaa7f34",
+    "source_url": "https://cdn.tenhou.net/2/t/5p.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "6p",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/6p.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "32b67e1a03e9e78392d4afb2125b80a682b811ed77770705f8ba106c4ee13749",
+    "source_file": "assets/tenhou-standard/tiles/6p.gif",
+    "source_sha256": "c8026578402d52b6756da48c9462ca4219ebf8ce664a36e9df42f72f89775ff7",
+    "source_url": "https://cdn.tenhou.net/2/t/6p.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "7p",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/7p.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "ce15f4820db45573846bee93c5b7ded72a954818db99705e4cd72eec925a3f09",
+    "source_file": "assets/tenhou-standard/tiles/7p.gif",
+    "source_sha256": "907afad3186d0ae5250e687ca0979e22569d52003f40eb6d7a250eaf639e6435",
+    "source_url": "https://cdn.tenhou.net/2/t/7p.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "8p",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/8p.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "bb03985de3f3b12be34e5e62d6922686a1b835a1e77ee0373318a946b532b243",
+    "source_file": "assets/tenhou-standard/tiles/8p.gif",
+    "source_sha256": "a9fcd0ac1cd333a401553c602b7bddb7a7b570bf344e0721a27bf1ba1d1db57f",
+    "source_url": "https://cdn.tenhou.net/2/t/8p.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "9p",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/9p.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "06341bc9b2fa97e6c4fbab96a62206b88fbcd181a9f8599aa12170ab4f7281ca",
+    "source_file": "assets/tenhou-standard/tiles/9p.gif",
+    "source_sha256": "887bbb4cb7a5b3b660071d2e43d3f38dda52804efec623051aa93d4a099ebda5",
+    "source_url": "https://cdn.tenhou.net/2/t/9p.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "1s",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/1s.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "871e29e118490b1bf497fe03fa65b1d117b7074d0095c7f8b90603abfff1c0d5",
+    "source_file": "assets/tenhou-standard/tiles/1s.gif",
+    "source_sha256": "d918957097e4f567af27a8ee60b739f7b46a73d73a8f1735710b5e274f23217c",
+    "source_url": "https://cdn.tenhou.net/2/t/1s.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "2s",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/2s.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "d53b9c31a0950daa0903e9c7ef4e3502cac328fe1e0c330073b8b0a6956be487",
+    "source_file": "assets/tenhou-standard/tiles/2s.gif",
+    "source_sha256": "3eb5735a956063cfdd409d9ef6d8ef09b112f93c79330135848c35cd5f38b198",
+    "source_url": "https://cdn.tenhou.net/2/t/2s.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "3s",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/3s.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "937c02ef4fe2229b18d20711f77700f1434854404c8975eb548c211746de3fda",
+    "source_file": "assets/tenhou-standard/tiles/3s.gif",
+    "source_sha256": "9a33dc4cf4505a1efbfe790503e6bc60372546d86c3b2d48fbcd2ca539b017f9",
+    "source_url": "https://cdn.tenhou.net/2/t/3s.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "4s",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/4s.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "f1fb971ee16efc77e331cc5def56f53e98705423fac0903d38b9052458f77285",
+    "source_file": "assets/tenhou-standard/tiles/4s.gif",
+    "source_sha256": "f2e8518087b0b3c713544b74478eaab052dc1b966c485aa7dd0211c7f0d3b6dc",
+    "source_url": "https://cdn.tenhou.net/2/t/4s.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "5s",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/5s.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "0f08604d295c15a00dc974a4ae2c65c4e2be6ffa4350583d44fa445d6973cc94",
+    "source_file": "assets/tenhou-standard/tiles/5s.gif",
+    "source_sha256": "4fada830fbdc8e447b5d327226b0d1736ac0584b501eed1509562a32f7420ae9",
+    "source_url": "https://cdn.tenhou.net/2/t/5s.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "6s",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/6s.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "a8cf95d56c8b8fb083940e5ec8d32ad3d004d9414425beed50e1fad76d672c99",
+    "source_file": "assets/tenhou-standard/tiles/6s.gif",
+    "source_sha256": "b3fc8d19e06220378071af57181849a6abdef9779d2835c902bf78f49a298062",
+    "source_url": "https://cdn.tenhou.net/2/t/6s.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "7s",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/7s.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "b304adc2e8312af1bc0603d3946f28b7ed5f41ac7e146864bba6adf25f3201ef",
+    "source_file": "assets/tenhou-standard/tiles/7s.gif",
+    "source_sha256": "7d439dee0b7f24637c2d25ef0d499ac372179b0406b8870597d6867016003fa5",
+    "source_url": "https://cdn.tenhou.net/2/t/7s.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "8s",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/8s.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "9c3e4f0d79c596e9ab4687230428d8ee8fa59e74825279cb4274295f84c84073",
+    "source_file": "assets/tenhou-standard/tiles/8s.gif",
+    "source_sha256": "3f4b9793a03300de2d78f51054935766cfaf5ed238de9ffe151233d9a873c371",
+    "source_url": "https://cdn.tenhou.net/2/t/8s.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "9s",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/9s.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "e92aaa0670bbd25e9cfff0663c2620183950ba51f3e85fa8c93f3876639e9dc2",
+    "source_file": "assets/tenhou-standard/tiles/9s.gif",
+    "source_sha256": "cb4e1e18a90368a7714443170f8ad38744a9871fd69bc800604ec056eb582551",
+    "source_url": "https://cdn.tenhou.net/2/t/9s.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "1z",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/1z.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "c8d7fa928d1f6d652f160390537f8b3effb77825fd0b36bb713d4bd08ffabc8b",
+    "source_file": "assets/tenhou-standard/tiles/1z.gif",
+    "source_sha256": "c293844457d2c0b80e1b14c5885c1801c8e5e344d8d0acec0ba905f3d960dc29",
+    "source_url": "https://cdn.tenhou.net/2/t/1z.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "2z",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/2z.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "48bdf9a9d95d62e6df64ba845a14e90fc632bf9f5e42fa81f571e308791d7980",
+    "source_file": "assets/tenhou-standard/tiles/2z.gif",
+    "source_sha256": "cef2ef4e53b4e6b993e429dcaf4e84584bf0c834cf74be3770855f94e78104c7",
+    "source_url": "https://cdn.tenhou.net/2/t/2z.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "3z",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/3z.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "667b372158bfb9aaca2e431110adf55de94234c7fa5c4998b0d22d7c3e019e1b",
+    "source_file": "assets/tenhou-standard/tiles/3z.gif",
+    "source_sha256": "cf003f603fb9c818f30373a0a07fd57cfa90f15435126802a2b0898a99f3e1ab",
+    "source_url": "https://cdn.tenhou.net/2/t/3z.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "4z",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/4z.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "01b0ede351019bc6d65de775fab5faab488ace7797e1b5c4aa30c17066478a4d",
+    "source_file": "assets/tenhou-standard/tiles/4z.gif",
+    "source_sha256": "91802b594813fa5b18ba4d385ba4103e68bfb49f78b73ba6010edbb61c02d4c4",
+    "source_url": "https://cdn.tenhou.net/2/t/4z.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "5z",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/5z.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "7071f3d2576ec6c68ec9016b02b756b5356ffb83188d7938708ca1b537179e2d",
+    "source_file": "assets/tenhou-standard/tiles/5z.gif",
+    "source_sha256": "f9ce615bcfcc4f2529f77832ab71e47dbb214b4eb221c69d5d830de5b1d0e638",
+    "source_url": "https://cdn.tenhou.net/2/t/5z.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "6z",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/6z.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "7697b5e54875ce8417b23cfe4c6babfce7cf315f05335b5135b8b46a65b704b1",
+    "source_file": "assets/tenhou-standard/tiles/6z.gif",
+    "source_sha256": "2a728d881426144e9bdd9d157a9af142b77db7cc690b3a3df9463bd7840652e6",
+    "source_url": "https://cdn.tenhou.net/2/t/6z.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "7z",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/7z.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "dedeb53a8b931d6b6e5d06e5896fec6f1c63cfdc3e55b1ac06c8fbeb4a82e3c2",
+    "source_file": "assets/tenhou-standard/tiles/7z.gif",
+    "source_sha256": "63d612358843849c9d06f19118ce92b5353687c4408cd21abaa489e52ced0c4b",
+    "source_url": "https://cdn.tenhou.net/2/t/7z.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "0m",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/0m.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "432192d71be8763006ed3b78c71ed8db460193b4c4da078a1662ae5f49a89824",
+    "source_file": "assets/tenhou-standard/tiles/0m.gif",
+    "source_sha256": "89bf8c5a470b9013d9d94e2d02bf74054013a733bac9ff6a6426b1f21bf42ed0",
+    "source_url": "https://cdn.tenhou.net/2/t/0m.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "0p",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/0p.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "6c846c7bc574ff91b1f28e9a02d2e0ab56d54fc32a7c95a73ead3374959eec64",
+    "source_file": "assets/tenhou-standard/tiles/0p.gif",
+    "source_sha256": "28034b7cc95543f7dd2258d5e63034d4ed55fb0cb4d78d4e896617bf859e15dd",
+    "source_url": "https://cdn.tenhou.net/2/t/0p.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  },
+  {
+    "tile": "0s",
+    "skin": "tenhou-standard",
+    "name": "天凤标准",
+    "file": "tenhou-standard/0s.png",
+    "width": 31,
+    "height": 47,
+    "sha256": "199366f837a9bc810f2937a394c52915d39cbb306bfe88c52ce04e3cbbfcc944",
+    "source_file": "assets/tenhou-standard/tiles/0s.gif",
+    "source_sha256": "e94ff0c216e006db7c1c414f6851e2f6840ddbc16596c96778447c1ea8fde152",
+    "source_url": "https://cdn.tenhou.net/2/t/0s.gif",
+    "source_box": {
+      "left": 0,
+      "top": 0,
+      "width": 31,
+      "height": 47
+    }
+  }
+]

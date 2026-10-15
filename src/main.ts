@@ -14,6 +14,8 @@ import { analyzeHand, loadEngine } from "./analysis.ts";
 import type { Analysis } from "./analysis.ts";
 import { parseRecognition, RECOGNITION_PROMPT } from "./recognition.ts";
 import type { AiRequest } from "./recognition.ts";
+import { recognizeLocal } from "./local-recognition.ts";
+import type { Box } from "./tile-matching.ts";
 
 const $ = <T extends HTMLElement = HTMLElement>(selector: string) =>
   document.querySelector<T>(selector)!;
@@ -35,6 +37,9 @@ let image = new Image();
 let cropStart: [number, number] | undefined;
 let cropEnd: [number, number] | undefined;
 let modelsReady = false;
+let recognizing = false;
+let imageLoading = false;
+let matchedBoxes: { box: Box; uncertain: boolean }[] = [];
 
 $("#app").innerHTML = `
   <main>
@@ -42,11 +47,11 @@ $("#app").innerHTML = `
     <section class="source-panel" aria-label="截图识牌">
       <div class="toolbar">
         <button id="choose-file">选择图片</button><button id="capture">框选截图</button><input id="file" type="file" accept="image/png,image/jpeg,image/webp" hidden/>
-        <select id="model" aria-label="在线识牌模型" disabled><option>正在加载模型…</option></select><button id="refresh-models" title="刷新模型列表">刷新</button><button id="recognize" class="primary" disabled>识别手牌</button>
+        <button id="recognize-local" class="primary" disabled>本地识牌</button><select id="model" aria-label="在线识牌模型" disabled><option>正在加载模型…</option></select><button id="refresh-models" title="刷新模型列表">刷新</button><button id="recognize" disabled>在线识牌</button>
       </div>
       <div id="dropzone" class="dropzone"><div id="empty-image">拖入或粘贴雀魂 / 天凤截图</div><canvas id="preview" hidden aria-label="手牌截图，拖动框选裁剪区域"></canvas></div>
       <div class="toolbar crop-tools"><button id="crop" hidden>应用裁剪</button><button id="restore-image" hidden>还原图片</button></div>
-      <p class="hint">点击识别会将当前图片发送给所选模型。</p><p id="recognition-status" role="status" class="status"></p>
+      <p class="hint">本地识牌支持雀魂标准、猫咪雀圣、飞鸟与鱼和天凤标准。请先框选横向手牌并应用裁剪，保留完整牌面、排除副露；本地识别不上传图片。点击“在线识牌”才会将当前图片发送给所选模型。</p><p id="recognition-status" role="status" class="status"></p>
     </section>
     <section class="hand-panel" aria-label="手牌编辑">
       <div class="section-head"><label for="hand-text">手牌</label><span id="tile-count" class="muted">0 张</span><div class="toolbar"><button id="sort">理牌</button><button id="clear">清空</button></div></div>
@@ -192,6 +197,11 @@ function paintImage(): void {
   const context = canvas.getContext("2d")!;
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(image, 0, 0);
+  for (const { box, uncertain } of matchedBoxes) {
+    context.strokeStyle = uncertain ? "#bd7017" : "#237f69";
+    context.lineWidth = Math.max(1, canvas.width / 600);
+    context.strokeRect(box.left, box.top, box.width, box.height);
+  }
   if (cropStart && cropEnd) {
     context.strokeStyle = "#eaa967";
     context.lineWidth = Math.max(2, canvas.width / 400);
@@ -215,12 +225,25 @@ function paintImage(): void {
 async function setImage(url: string, original = true): Promise<void> {
   const revision = ++imageRevision;
   requestId++;
+  recognizing = false;
+  imageLoading = true;
+  matchedBoxes = [];
+  updateRecognitionButtons();
   activeRequest?.abort?.();
   activeRequest = undefined;
   const nextImage = new Image();
   nextImage.src = url;
-  await nextImage.decode();
+  try {
+    await nextImage.decode();
+  } catch (error) {
+    if (revision === imageRevision) {
+      imageLoading = false;
+      updateRecognitionButtons();
+    }
+    throw error;
+  }
   if (revision !== imageRevision) return;
+  imageLoading = false;
   image = nextImage;
   imageUrl = url;
   if (original) originalImageUrl = url;
@@ -234,7 +257,7 @@ async function setImage(url: string, original = true): Promise<void> {
   $("#restore-image").hidden = url === originalImageUrl;
   $("#recognition-status").textContent =
     "图片已就绪。可拖动框选手牌区域，再点击识别。";
-  $<HTMLButtonElement>("#recognize").disabled = !modelsReady;
+  updateRecognitionButtons();
   paintImage();
 }
 
@@ -255,12 +278,18 @@ async function readImage(file: File): Promise<void> {
   }
 }
 
-/** Discover vision models from the actual uTools host; browser preview stays manual. */
+/** Keep local recognition available without an online model or uTools host. */
+function updateRecognitionButtons(): void {
+  $<HTMLButtonElement>("#recognize-local").disabled = recognizing || imageLoading || !imageUrl;
+  $<HTMLButtonElement>("#recognize").disabled = recognizing || imageLoading || !imageUrl || !modelsReady;
+}
+
+/** Discover vision models from the actual uTools host independently of local recognition. */
 async function loadModels(): Promise<void> {
   const select = $<HTMLSelectElement>("#model");
   modelsReady = false;
   select.disabled = true;
-  $<HTMLButtonElement>("#recognize").disabled = true;
+  updateRecognitionButtons();
   if (!host?.allAiModels || !host.ai) {
     select.innerHTML = "<option>请在 uTools 8 中使用在线识牌</option>";
     return;
@@ -277,7 +306,7 @@ async function loadModels(): Promise<void> {
           .join("")
       : "<option>未找到视觉模型，请在 uTools 配置</option>";
     select.disabled = !modelsReady;
-    $<HTMLButtonElement>("#recognize").disabled = !modelsReady || !imageUrl;
+    updateRecognitionButtons();
   } catch (error) {
     select.innerHTML = "<option>模型列表获取失败</option>";
     $("#recognition-status").textContent = String(error);
@@ -285,34 +314,57 @@ async function loadModels(): Promise<void> {
 }
 
 /** Recognize once, then ignore any response superseded by a new image or manual edit. */
-async function recognize(): Promise<void> {
-  if (!host || !modelsReady || !imageUrl) return;
+async function recognize(local = false): Promise<void> {
+  if (recognizing || imageLoading || !imageUrl || (!local && (!host || !modelsReady))) return;
   const id = ++requestId;
   const revision = handRevision;
   const started = performance.now();
-  $<HTMLButtonElement>("#recognize").disabled = true;
-  $("#recognition-status").textContent = "正在识别…";
+  recognizing = true;
+  matchedBoxes = [];
+  paintImage();
+  updateRecognitionButtons();
+  $("#recognition-status").textContent = local ? "正在本地匹配牌面…" : "正在在线识别…";
   try {
-    activeRequest = host.ai({
-      model: $<HTMLSelectElement>("#model").value,
-      messages: [
-        {
-          role: "user",
-          content: [
-            { type: "text", text: RECOGNITION_PROMPT },
-            { type: "image_url", image_url: { url: imageUrl } },
-          ],
-        },
-      ],
-    });
-    const response = await activeRequest;
+    let parsed;
+    if (local) {
+      const pixels = document.createElement("canvas");
+      // Bounding the working image limits memory and keeps large screenshots responsive.
+      const scale = Math.min(1, 1800 / image.naturalWidth, 600 / image.naturalHeight);
+      pixels.width = Math.max(1, Math.round(image.naturalWidth * scale));
+      pixels.height = Math.max(1, Math.round(image.naturalHeight * scale));
+      const context = pixels.getContext("2d", { willReadFrequently: true })!;
+      context.drawImage(image, 0, 0, pixels.width, pixels.height);
+      const localResult = await recognizeLocal(context.getImageData(0, 0, pixels.width, pixels.height), () => id !== requestId || revision !== handRevision);
+      if (id === requestId && revision === handRevision) {
+        matchedBoxes = localResult.boxes.map((box, index) => ({
+          box: { left: box.left / scale, top: box.top / scale, width: box.width / scale, height: box.height / scale },
+          uncertain: localResult.tiles[index] === null,
+        }));
+        paintImage();
+      }
+      parsed = localResult;
+    } else {
+      activeRequest = host!.ai({
+        model: $<HTMLSelectElement>("#model").value,
+        messages: [
+          {
+            role: "user",
+            content: [
+              { type: "text", text: RECOGNITION_PROMPT },
+              { type: "image_url", image_url: { url: imageUrl } },
+            ],
+          },
+        ],
+      });
+      const response = await activeRequest;
+      parsed = parseRecognition(response.content ?? "");
+    }
     if (id !== requestId) return;
     if (revision !== handRevision) {
       $("#recognition-status").textContent =
         "识别期间手牌已被编辑，未覆盖你的修改。";
       return;
     }
-    const parsed = parseRecognition(response.content ?? "");
     slots = parsed.tiles;
     selected = -1;
     $<HTMLInputElement>("#meld-text").value = "";
@@ -322,11 +374,13 @@ async function recognize(): Promise<void> {
   } catch (error) {
     if (id === requestId)
       $("#recognition-status").textContent =
+        revision !== handRevision ? "识别期间手牌已被编辑，未覆盖你的修改。" :
         `识别未完成：${error instanceof Error ? error.message : String(error)} 可以继续手动输入。`;
   } finally {
     if (id === requestId) {
       activeRequest = undefined;
-      $<HTMLButtonElement>("#recognize").disabled = false;
+      recognizing = false;
+      updateRecognitionButtons();
     }
   }
 }
@@ -461,6 +515,7 @@ $("#capture").onclick = () =>
       });
   });
 $("#recognize").onclick = () => void recognize();
+$("#recognize-local").onclick = () => void recognize(true);
 $("#refresh-models").onclick = () => void loadModels();
 $("#restore-image").onclick = () => void setImage(originalImageUrl, false);
 $("#dropzone").ondragover = (event) => {

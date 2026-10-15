@@ -2,22 +2,23 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { JSDOM } from 'jsdom';
+import sharp from 'sharp';
 
 const page = readFileSync(new URL('../dist/index.html', import.meta.url), 'utf8');
 const asset = page.match(/src="([^"]+\.js)"/)[1];
 const bundle = readFileSync(new URL(`../dist/${asset}`, import.meta.url), 'utf8');
 
 /** Run the actual production bundle against a DOM fixture, not a real uTools host. */
-function mount(host) {
+function mount(host, pixels) {
   const dom = new JSDOM('<div id="app"></div>', { url: 'https://prototype.test/', runScripts: 'outside-only' });
   dom.window.WebAssembly = WebAssembly;
   dom.window.utools = host;
   dom.window.Image = class {
-    naturalWidth = 800;
-    naturalHeight = 100;
+    naturalWidth = pixels?.width ?? 800;
+    naturalHeight = pixels?.height ?? 100;
     async decode() {}
   };
-  dom.window.HTMLCanvasElement.prototype.getContext = () => ({ clearRect() {}, drawImage() {}, fillRect() {}, strokeRect() {} });
+  dom.window.HTMLCanvasElement.prototype.getContext = () => ({ clearRect() {}, drawImage() {}, fillRect() {}, strokeRect() {}, getImageData: () => pixels });
   dom.window.eval(bundle);
   const query = (selector) => dom.window.document.querySelector(selector);
   const enter = (selector, value) => {
@@ -25,6 +26,21 @@ function mount(host) {
     query(selector).dispatchEvent(new dom.window.Event('input'));
   };
   return { dom, query, enter };
+}
+
+/** Paste through the production FileReader path; only decoding/canvas pixels are mocked. */
+function pasteImage(dom) {
+  const event = new dom.window.Event('paste');
+  event.clipboardData = { items: [{ type: 'image/png', getAsFile: () => new dom.window.File(['fixture'], 'hand.png', { type: 'image/png' }) }] };
+  dom.window.document.dispatchEvent(event);
+}
+
+/** A real two-tile raster makes the local UI test exercise the actual embedded matching library. */
+async function localPixels() {
+  const { data, info } = await sharp({ create: { width: 184, height: 153, channels: 4, background: '#20394f' } })
+    .composite(['0s', '5s'].map((tile, i) => ({ input: new URL(`../assets/recognition-templates/majsoul-standard/${tile}.png`, import.meta.url).pathname, left: 12 + i * 80, top: 12 })))
+    .raw().toBuffer({ resolveWithObject: true });
+  return { ...info, data };
 }
 
 /** Wait for asynchronous engine/model initialization, bounded to two seconds. */
@@ -169,5 +185,53 @@ test('a response for an older screenshot is ignored', async () => {
     host.resolve('{"tiles":["1p","2p"],"notes":""}');
     await until(() => query('#recognition-status').textContent.includes('图片已就绪'));
     assert.equal(query('#hand-text').value, '12m');
+  } finally { dom.window.close(); }
+});
+
+test('local recognition works without uTools or a network request', async () => {
+  const { dom, query } = mount(undefined, await localPixels());
+  try {
+    dom.window.fetch = () => { assert.fail('Local recognition must not fetch'); };
+    pasteImage(dom);
+    await until(() => !query('#recognize-local').disabled);
+    assert.equal(query('#recognize').disabled, true);
+    query('#recognize-local').click();
+    await until(() => query('#recognition-status').textContent.includes('本地匹配 2 张'));
+    assert.equal(query('#hand-text').value, '05s');
+    assert.equal(query('#hand').children.length, 2);
+    assert.equal(query('#recognize-local').disabled, false);
+    assert.equal(query('#recognize').disabled, true);
+  } finally { dom.window.close(); }
+});
+
+test('local recognition does not call online AI and a manual correction cancels it', async () => {
+  const host = mockHost();
+  const { dom, query, enter } = mount(host.api, await localPixels());
+  try {
+    host.image();
+    await until(() => !query('#recognize-local').disabled);
+    query('#recognize-local').click();
+    enter('#hand-text', '12m');
+    await until(() => query('#recognition-status').textContent.includes('未覆盖'));
+    assert.equal(query('#hand-text').value, '12m');
+    assert.equal(host.options(), undefined);
+    assert.equal(query('#recognize-local').disabled, false);
+  } finally { dom.window.close(); }
+});
+
+test('changing the image cancels a pending local result', async () => {
+  const host = mockHost();
+  const { dom, query, enter } = mount(host.api, await localPixels());
+  try {
+    enter('#hand-text', '12m');
+    host.image();
+    await until(() => !query('#recognize-local').disabled);
+    query('#recognize-local').click();
+    host.image();
+    assert.equal(query('#recognize-local').disabled, true);
+    await until(() => query('#recognition-status').textContent.includes('图片已就绪'));
+    await new Promise((resolve) => setTimeout(resolve, 30));
+    assert.equal(query('#hand-text').value, '12m');
+    assert.equal(query('#recognize-local').disabled, false);
   } finally { dom.window.close(); }
 });

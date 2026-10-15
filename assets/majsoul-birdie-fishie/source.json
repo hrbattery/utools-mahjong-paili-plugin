@@ -1,0 +1,63 @@
+{
+  "name": "飞鸟与鱼 / Birdie and Fishie",
+  "item_id": 30710001,
+  "downloaded_on": "2026-10-15",
+  "source": "riichi.moe 社区镜像中的雀魂 Unity 游戏纹理提取文件",
+  "processing": "保留下载的 PNG 文件，未裁剪、缩放或重新编码。",
+  "item_metadata_url": "https://raw.githubusercontent.com/vg-mjg/MajsoulData/main/src/_data/items.json",
+  "manifest_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/extracted_manifest_en.json",
+  "manifest_generated_at": "2026-09-23T05:05:45Z",
+  "files": [
+    {
+      "file": "hand.png",
+      "description": "完整手牌视角图集",
+      "width": 800,
+      "height": 516,
+      "bytes": 241595,
+      "sha256": "86a8262da194a67a9630a70b15a80848aa210ae8174fae65992d96bc0ace9a4d",
+      "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+      "source_path": "MyAssets/deco/mjpface/mjpface_25summer/3d/texture/hand.png",
+      "asset_type": "Texture2D",
+      "bundle": "uwv8ssu@8b6258224gelc_be-48wzstm0hhjcrmmo$xdaca2wwyo_ad48abb92d8429782e65"
+    },
+    {
+      "file": "mjp.png",
+      "description": "3D 牌面纹理图集",
+      "width": 512,
+      "height": 512,
+      "bytes": 171311,
+      "sha256": "83d86344e149b5ded541926fe8dd7dad0a9d6dba4591ba5590f972794e51cb58",
+      "source_url": "https://files.riichi.moe/mjg/game%20resources%20and%20tools/Mahjong%20Soul/unity_raw/extracted/MyAssets/deco/mjpface/mjpface_25summer/3d/texture/mjp.png",
+      "source_path": "MyAssets/deco/mjpface/mjpface_25summer/3d/texture/mjp.png",
+      "asset_type": "Texture2D",
+      "bundle": "uwv8ssu@8b6258224gelc_be-48wzstm0hhjcrmmo$xdaca2wwyo_ad48abb92d8429782e65"
+    }
+  ],
+  "catalog_check": {
+    "tile_face_items": [
+      {
+        "id": 305718,
+        "name": "牌面-猫咪雀圣"
+      },
+      {
+        "id": 305725,
+        "name": "牌面-默认"
+      },
+      {
+        "id": 30710001,
+        "name": "牌面-飞鸟与鱼"
+      }
+    ],
+    "additional_regions_checked": [
+      {
+        "region": "cn",
+        "manifest_generated_at": "2026-09-23T05:08:08Z"
+      },
+      {
+        "region": "jp",
+        "manifest_generated_at": "2026-10-12T03:00:29Z"
+      }
+    ],
+    "scope": "物品表中可装备的牌面皮肤；不包含牌背、语言及编号变体、使用标准图案的特殊模式贴图。"
+  }
+}
