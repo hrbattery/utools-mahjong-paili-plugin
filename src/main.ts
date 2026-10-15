@@ -103,13 +103,21 @@ function draftText(): string {
   return slots.map((tile) => tile ?? "?").join(" ");
 }
 
-/** Synchronize point edits back to the text field and reset any old analysis branch. */
+/** Sort and synchronize edits, matching repeated tiles by their original slot for a brief slide. */
 function syncHand(resetHistory = true): void {
-  if (autoSort) {
-    slots.sort((a, b) =>
-      a === null ? 1 : b === null ? -1 : tileId(a) - tileId(b),
-    );
+  const order = autoSort
+    ? slots.map((tile, index) => ({ tile, index })).sort((a, b) =>
+      a.tile === null ? 1 : b.tile === null ? -1 : tileId(a.tile) - tileId(b.tile),
+    )
+    : undefined;
+  const positions: DOMRect[] = [];
+  if (order?.some((entry, index) => entry.index !== index) &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    // Measure the edited hand before sorting so new and repeated tiles keep their own origin.
+    renderHand();
+    positions.push(...Array.from($("#hand").children, (tile) => tile.getBoundingClientRect()));
   }
+  if (order) slots = order.map((entry) => entry.tile);
   $<HTMLTextAreaElement>("#hand-text").value = slots.includes(null)
     ? draftText()
     : formatTiles(slots as Tile[]);
@@ -120,6 +128,19 @@ function syncHand(resetHistory = true): void {
     discarded = [];
   }
   renderHand();
+  const tiles = $("#hand").children;
+  order?.forEach((entry, index) => {
+    const previous = positions[entry.index];
+    if (!previous) return;
+    const tile = tiles[index];
+    const current = tile.getBoundingClientRect();
+    const x = previous.left - current.left;
+    const y = previous.top - current.top;
+    if (x || y) tile.animate([
+      { transform: `translate(${x}px, ${y}px)` },
+      { transform: "translate(0, 0)" },
+    ], { duration: 160, easing: "ease-out" });
+  });
   renderAnalysis();
 }
 

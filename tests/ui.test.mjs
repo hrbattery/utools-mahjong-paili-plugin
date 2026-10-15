@@ -13,6 +13,7 @@ function mount(host, pixels) {
   const recognizedImages = [];
   const dom = new JSDOM('<div id="app"></div>', { url: 'https://prototype.test/', runScripts: 'outside-only' });
   dom.window.WebAssembly = WebAssembly;
+  dom.window.matchMedia = () => ({ matches: false });
   dom.window.utools = host;
   dom.window.Image = class {
     naturalWidth = pixels?.width ?? 800;

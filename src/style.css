@@ -295,8 +295,13 @@ summary {
 .palette > div {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 2px;
   margin-top: 4px;
+}
+.palette .tile,
+.results-panel .tile {
+  width: 24px;
+  height: 33px;
 }
 .field-label {
   display: block;
@@ -381,10 +386,6 @@ td:last-child {
 .waits > div > small {
   color: #737373;
   font-size: 10px;
-}
-.waits .tile {
-  width: 28px;
-  height: 38px;
 }
 .complete {
   font-size: 13px;
