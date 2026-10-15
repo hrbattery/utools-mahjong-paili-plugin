@@ -1,0 +1,62 @@
+[
+  {
+    "id": "tenhou-001",
+    "hand": "123456789m12345p",
+    "draw_gap": false,
+    "tags": ["14张", "万筒", "连续排列"]
+  },
+  {
+    "id": "tenhou-002",
+    "hand": "6789p123456789s1z",
+    "draw_gap": true,
+    "tags": ["14张", "筒索", "摸牌间隔"]
+  },
+  {
+    "id": "tenhou-003",
+    "hand": "11223344556677z",
+    "draw_gap": true,
+    "tags": ["14张", "全部字牌", "七对子"]
+  },
+  {
+    "id": "tenhou-004",
+    "hand": "405m405p405s12355z",
+    "draw_gap": true,
+    "tags": ["14张", "三种赤五", "普通五", "白板"]
+  },
+  {
+    "id": "tenhou-005",
+    "hand": "111123m777p555z22s",
+    "draw_gap": true,
+    "tags": ["14张", "四张相同牌", "重复牌", "白板"]
+  },
+  {
+    "id": "tenhou-006",
+    "hand": "13m123456p11s1z",
+    "draw_gap": true,
+    "tags": ["11张", "短手牌"]
+  },
+  {
+    "id": "tenhou-007",
+    "hand": "123m45p11z1s",
+    "draw_gap": true,
+    "tags": ["8张", "短手牌", "未排序"]
+  },
+  {
+    "id": "tenhou-008",
+    "hand": "055p67s",
+    "draw_gap": true,
+    "tags": ["5张", "短手牌", "赤五", "重复牌"]
+  },
+  {
+    "id": "tenhou-009",
+    "hand": "55z",
+    "draw_gap": true,
+    "tags": ["2张", "短手牌", "白板"]
+  },
+  {
+    "id": "tenhou-010",
+    "hand": "19m19p19s1234567z",
+    "draw_gap": false,
+    "tags": ["13张", "待摸牌", "全部字牌"]
+  }
+]

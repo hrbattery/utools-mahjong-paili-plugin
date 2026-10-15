@@ -1,0 +1,21 @@
+{
+  "name": "fast-tenhou-paili",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test": "node --test tests/*.test.ts",
+    "test:ui": "npm run build && node --test tests/ui.test.mjs",
+    "samples:tenhou": "node scripts/create-tenhou-samples.ts",
+    "samples:majsoul": "node scripts/prepare-majsoul-samples.ts",
+    "build:engine": "cargo build --manifest-path engine/Cargo.toml --target wasm32-unknown-unknown --release && node scripts/copy-engine.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1",
+    "sharp": "^0.35.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "main": "index.html",
+  "logo": "logo.svg",
+  "pluginSetting": { "height": 720 },
+  "features": [
+    {
+      "code": "paili",
+      "description": "截图识牌、牌串校正与数学进张分析",
+      "cmds": [
+        "牌理",
+        "手牌分析",
+        "paili",
+        { "type": "img", "label": "识别麻将手牌" },
+        {
+          "type": "regex",
+          "label": "分析麻将牌串",
+          "match": "/^([0-9]+[mpsz]\\s*)+$/i"
+        }
+      ]
+    }
+  ]
+}

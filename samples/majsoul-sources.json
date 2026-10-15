@@ -1,0 +1,67 @@
+[
+  {
+    "id": "majsoul-001",
+    "source_page": "https://www.4gamer.net/games/517/G051738/",
+    "source_image": "https://www.4gamer.net/games/517/G051738/SS/005.jpg",
+    "full_image": "majsoul-001-full.jpg",
+    "crop": { "left": 136, "top": 573, "width": 660, "height": 102 },
+    "hand": "45678m356889p",
+    "melds": "444z",
+    "melds_complete": true,
+    "split": "development",
+    "tags": ["11张", "短手牌", "副露分离", "重复牌"],
+    "notes": "只标注底部手牌；右下角北刻子单独记录为副露。"
+  },
+  {
+    "id": "majsoul-002",
+    "source_page": "https://natsumikan-toaru.hatenablog.com/entry/2021/04/01/190000",
+    "source_image": "https://cdn-ak.f.st-hatena.com/images/fotolife/n/natsumikan_toaru/20210315/20210315210446.png",
+    "full_image": "majsoul-002-full.png",
+    "crop": { "left": 112, "top": 486, "width": 668, "height": 90 },
+    "hand": "67m666p34567s677z",
+    "melds": "",
+    "melds_complete": true,
+    "split": "development",
+    "tags": ["13张", "待摸牌", "重复牌", "普通五索", "字牌"],
+    "notes": "五索只有中间一根为红色，属于普通5s；不是全红的0s。上家与旁家的公开牌不计入手牌。"
+  },
+  {
+    "id": "majsoul-003",
+    "source_page": "https://note.com/st9/n/nd1857bdc3f92",
+    "source_image": "https://assets.st-note.com/img/1743341890-HL7z8erNRQSuOPyfAgCT1W4j.png",
+    "full_image": "majsoul-003-full.png",
+    "crop": { "left": 465, "top": 970, "width": 1505, "height": 209 },
+    "hand": "457m2356p3689s66z5s",
+    "melds": "",
+    "melds_complete": true,
+    "split": "development",
+    "tags": ["14张", "摸牌间隔", "普通五索", "界面叠层", "高清"],
+    "notes": "最右侧单独摸牌是普通5s，计入手牌；底部系统指示条与打牌提示遮住部分牌边，但牌种仍可辨认。"
+  },
+  {
+    "id": "majsoul-004",
+    "source_page": "https://haisousa.hatenadiary.jp/entry/2025/09/03/122500",
+    "source_image": "https://cdn-ak.f.st-hatena.com/images/fotolife/y/yoyrz8oooooo/20250903/20250903121208.jpg",
+    "full_image": "majsoul-004-full.jpg",
+    "crop": { "left": 124, "top": 540, "width": 744, "height": 93 },
+    "hand": "1p2233067789s11z",
+    "melds": "",
+    "melds_complete": true,
+    "split": "validation",
+    "tags": ["13张", "赤五索", "重复牌", "原图牌底截断", "全桌特效"],
+    "notes": "底部牌面清晰，原图截掉少量牌底边缘；上方特效与其他玩家手牌不属于识别目标。"
+  },
+  {
+    "id": "majsoul-005",
+    "source_page": "https://pasoul.jp/view/category/jantama",
+    "source_image": "https://gigaplus.makeshop.jp/pasoul/files/img/category/game/jantama/jantama-img01.webp",
+    "full_image": "majsoul-005-full.webp",
+    "crop": { "left": 260, "top": 898, "width": 625, "height": 130 },
+    "hand": "067s1144z1z",
+    "melds": "777z 666z",
+    "melds_complete": true,
+    "split": "validation",
+    "tags": ["8张", "短手牌", "赤五索", "摸牌间隔", "和牌特效", "副露分离"],
+    "notes": "最后单独的东计入8张手牌；右下中刻、发刻单独记录。左侧斜放筒子是其他玩家的副露。"
+  }
+]

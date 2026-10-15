@@ -1,0 +1,21 @@
+{
+  "description": "仅为标注格式示例，下列图片路径不存在，请替换为真实截图。",
+  "samples": [
+    {
+      "id": "majsoul-001",
+      "platform": "majsoul",
+      "client": "desktop-browser",
+      "full_image": "majsoul-001-full.png",
+      "hand_image": "majsoul-001-hand.png",
+      "hand": "123m245779p13555z",
+      "melds": "",
+      "melds_complete": true,
+      "viewport": "待填写",
+      "scale": "待填写",
+      "tile_skin": "默认",
+      "tags": ["14张", "字牌", "重复牌"],
+      "split": "development",
+      "notes": "请替换为真实人工核对的牌串；手牌包括单独摸牌。"
+    }
+  ]
+}
