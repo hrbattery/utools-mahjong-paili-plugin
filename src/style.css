@@ -333,6 +333,21 @@ td:last-child {
   font-size: 13px;
   color: #555;
 }
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 1000;
+  max-width: calc(100% - 32px);
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #333;
+  color: #fff;
+  box-shadow: 0 4px 12px #0002;
+  text-align: center;
+  pointer-events: none;
+}
 @media (max-width: 520px) {
   main {
     padding: 12px;

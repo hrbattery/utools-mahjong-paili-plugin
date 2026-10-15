@@ -40,6 +40,7 @@ let modelsReady = false;
 let recognizing = false;
 let imageLoading = false;
 let matchedBoxes: { box: Box; uncertain: boolean }[] = [];
+let copyToastTimer: number | undefined;
 
 $("#app").innerHTML = `
   <main>
@@ -65,7 +66,8 @@ $("#app").innerHTML = `
       <p id="calculation-note" class="hint"></p><div id="analysis" aria-live="polite"></div>
       <p id="simulation" class="hint"></p>
     </section>
-  </main>`;
+  </main>
+  <div id="copy-toast" class="toast" role="status" hidden></div>`;
 
 /** Escape all dynamic text before inserting it into the HTML-based view. */
 function escapeHtml(text: string): string {
@@ -496,10 +498,22 @@ $("#tenhou").onclick = () => {
   if (host) host.shellOpenExternal(url);
   else window.open(url, "_blank", "noopener,noreferrer");
 };
+/** Report the clipboard result briefly, restarting the toast duration on each copy. */
 $("#copy").onclick = async () => {
-  const text = formatTiles(slots as Tile[]);
-  if (host) host.copyText(text);
-  else await navigator.clipboard.writeText(text);
+  const toast = $("#copy-toast");
+  try {
+    const text = formatTiles(slots as Tile[]);
+    if (host) host.copyText(text);
+    else await navigator.clipboard.writeText(text);
+    toast.textContent = "牌串已复制";
+  } catch {
+    toast.textContent = "复制失败，请重试。";
+  }
+  window.clearTimeout(copyToastTimer);
+  toast.hidden = false;
+  copyToastTimer = window.setTimeout(() => {
+    toast.hidden = true;
+  }, 2000);
 };
 $("#choose-file").onclick = () => $<HTMLInputElement>("#file").click();
 $("#file").onchange = () => {
