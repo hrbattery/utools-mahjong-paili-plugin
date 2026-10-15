@@ -3,3 +3,7 @@ dist/
 engine/target/
 .DS_Store
 samples/private/
+*.upx
+.env
+.env.*
+!.env.example

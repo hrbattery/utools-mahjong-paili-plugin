@@ -1,8 +1,10 @@
-# 日麻牌理速查 / fast-tenhou-paili
+# 日麻牌理速查 / utools-mahjong-paili-plugin
 
 uTools 8 牌理工具：导入截图或输入天凤牌串，查看向听数、有效进张和切牌候选。识牌与计算均在本地完成，不上传截图。
 
 ## 运行
+
+开发环境使用 Node.js 24 或更新版本。
 
 ```sh
 npm ci
@@ -57,7 +59,21 @@ npm run build:engine
 
 - **shanten-dp 0.3.2**（MIT）：用于本地向听数与进张计算，编译进 WebAssembly 引擎。
 - **mahjong_graphic**（M+ 字型许可）：提供手牌、点选牌表和进张结果使用的 SVG 牌面，不参与识别匹配。
-- **雀魂与天凤游戏素材**：用于生成本地识别模板和测试样本。插件内置模板提取的图案、颜色特征，原始图片与样本不随插件打包；来源记录不代表再分发授权。
+- **雀魂与天凤游戏素材**：用于生成本地识别模板和测试样本。原始图集、牌面 GIF、裁剪模板和衍生识牌特征保留在源码仓库及现有提交历史中。插件安装包仅包含衍生识牌特征，不包含这些原图和裁剪图片。**这些游戏素材及衍生数据的再分发授权尚未确认，不适用本项目的 MIT 许可**；来源记录不代表再分发授权。
 - **sharp**（Apache-2.0）：仅用于开发阶段的素材准备和图片测试，不进入插件运行时。
 
-来源、版本与许可说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+来源、版本与许可说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)，本次公开范围与未解决事项见 [素材检查记录](docs/ASSET_REVIEW.md)。
+
+## 许可证
+
+本项目原创代码采用 [MIT License](LICENSE)，版权归 hrbattery 及贡献者所有。第三方依赖与牌面素材保留各自许可，不因本项目使用 MIT 而变更授权范围。
+
+## 仓库维护与发布
+
+- 一个插件一个仓库；在主分支维护稳定版本，较大的修改使用功能分支和 Pull Request。
+- GitHub Topics 建议设置为 `utools`、`utools-plugin`、`mahjong`、`riichi`。
+- 提交前运行 `npm test` 和 `npm run test:ui`；GitHub Actions 使用同样的检查。
+- 版本采用 `0.1.0` 格式，Git 标签使用 `v0.1.0`；发布时同步 `package.json`、`package-lock.json`、`engine/Cargo.toml`、`engine/Cargo.lock` 及 uTools 开发者工具中的版本信息。
+- 发布前更新 [CHANGELOG.md](CHANGELOG.md)，运行构建，并在实际 uTools 中检查导入、截图权限和本地识牌。
+- uTools 开发者工具仅打包 `dist/`；GitHub Releases 附上插件安装包和更新说明。依赖目录、编译缓存、私人样本和安装包不提交 Git。
+- 构建会将项目 `LICENSE`、`THIRD_PARTY_NOTICES.md` 和 `public/licenses/` 一并放入 `dist/`，发布时保留这些文件。

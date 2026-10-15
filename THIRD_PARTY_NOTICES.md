@@ -1,5 +1,9 @@
 # Third-party notices
 
+## License scope
+
+The root `LICENSE` applies to original project code, including the Rust ABI wrapper and original plugin logo. It does not relicense third-party code, artwork, game images, crops, or recognition data derived from game images. Those materials retain their respective rights and license terms described below. The build includes this notice, the root `LICENSE`, and `public/licenses/` in the plugin package.
+
 ## shanten-dp 0.3.2
 
 - Author: tomohxx
@@ -17,8 +21,9 @@ The Rust dependency graph is pinned in `engine/Cargo.lock`. Runtime transitive d
 - Tenhou tile source: `https://cdn.tenhou.net/2/t/{tile}.gif`, starting from the user-provided `2m.gif`. The 37 template GIFs were copied byte-for-byte from the existing local cache.
 - Templates: `assets/recognition-templates/` contains 148 lossless PNG crops and a manifest of source rectangles and SHA-256 digests. `src/generated/tile-templates.json` contains derived glyph/color descriptors embedded in the plugin for offline matching.
 - Samples: public Mahjong Soul screenshot sources and original URLs are recorded in `samples/majsoul-sources.json`. Additional Tenhou/Mahjong Soul screenshots are recorded in `samples/real-screenshot-sources.json` and `samples/shape-holdout-sources.json`, including original URLs, reviewed crops and image hashes.
-- Distribution: original atlases and individual template PNGs are not bundled. Downloaded screenshots and derived sample PNGs stay under ignored `samples/private/` and are not bundled either. The plugin embeds only the derived recognition descriptors; source manifests retain provenance and SHA-256 digests.
-- These game images and derivatives are not covered by shanten-dp's MIT license. The source records document provenance, not a redistribution license grant.
+- Source distribution: original atlases, Tenhou tile GIFs, 148 cropped template PNGs, and derived recognition descriptors are tracked in this repository and remain in its existing Git history. Making the repository public exposes these files and their historical versions.
+- Plugin distribution: original atlases, tile GIFs, and individual template PNGs are not bundled. Downloaded screenshots and derived sample PNGs stay under ignored `samples/private/` and are not bundled either. The plugin embeds the derived recognition descriptors; source manifests retain provenance and SHA-256 digests.
+- No explicit redistribution grant for these game images, crops, or derived recognition descriptors was verified during the 2026-10-15 review. They are excluded from the root MIT license as well as shanten-dp's MIT license. Public availability, cropping, and feature extraction are not recorded here as permission to redistribute. See `docs/ASSET_REVIEW.md` for the review scope and unresolved status.
 
 ## Display tile artwork
 
