@@ -10,6 +10,7 @@ const bundle = readFileSync(new URL(`../dist/${asset}`, import.meta.url), 'utf8'
 
 /** Run the actual production bundle against a DOM fixture, not a real uTools host. */
 function mount(host, pixels) {
+  const recognizedImages = [];
   const dom = new JSDOM('<div id="app"></div>', { url: 'https://prototype.test/', runScripts: 'outside-only' });
   dom.window.WebAssembly = WebAssembly;
   dom.window.utools = host;
@@ -18,14 +19,29 @@ function mount(host, pixels) {
     naturalHeight = pixels?.height ?? 100;
     async decode() {}
   };
-  dom.window.HTMLCanvasElement.prototype.getContext = () => ({ clearRect() {}, drawImage() {}, fillRect() {}, strokeRect() {}, getImageData: () => pixels });
+  dom.window.HTMLCanvasElement.prototype.getContext = () => {
+    let source;
+    return {
+      clearRect() {}, drawImage(image) { source = image.src; }, fillRect() {}, strokeRect() {},
+      getImageData() { recognizedImages.push(source); return pixels; },
+    };
+  };
   dom.window.eval(bundle);
   const query = (selector) => dom.window.document.querySelector(selector);
   const enter = (selector, value) => {
     query(selector).value = value;
     query(selector).dispatchEvent(new dom.window.Event('input'));
   };
-  return { dom, query, enter };
+  return { dom, query, enter, recognizedImages };
+}
+
+/** Hold image decoding to exercise out-of-order loads and edits before recognition starts. */
+function deferImageDecoding(dom) {
+  const pending = [];
+  dom.window.Image = class extends dom.window.Image {
+    decode() { return new Promise((resolve, reject) => pending.push({ resolve, reject })); }
+  };
+  return pending;
 }
 
 /** Paste through the production FileReader path; only decoding/canvas pixels are mocked. */
@@ -70,7 +86,7 @@ function mockHost() {
       copyText() {},
       shellOpenExternal() {},
     },
-    image: () => onEnter({ type: 'img', payload: 'data:image/png;base64,c3ludGhldGlj' }),
+    image: (payload = 'data:image/png;base64,c3ludGhldGlj') => onEnter({ type: 'img', payload }),
     resolve: (content) => resolveAi({ content }),
     options: () => lastOptions,
     modelRequests: () => modelRequests,
@@ -200,19 +216,16 @@ test('a response for an older screenshot is ignored', async () => {
     query('#recognize').click();
     host.image();
     host.resolve('{"tiles":["1p","2p"],"notes":""}');
-    await until(() => query('#recognition-status').textContent.includes('图片已就绪'));
+    await until(() => !query('#recognize-local').disabled);
     assert.equal(query('#hand-text').value, '12m');
   } finally { dom.window.close(); }
 });
 
-test('local recognition works without uTools or a network request', async () => {
+test('pasting automatically recognizes locally without uTools, clicks or network requests', async () => {
   const { dom, query } = mount(undefined, await localPixels());
   try {
     dom.window.fetch = () => { assert.fail('Local recognition must not fetch'); };
     pasteImage(dom);
-    await until(() => !query('#recognize-local').disabled);
-    assert.equal(query('#recognize').disabled, true);
-    query('#recognize-local').click();
     await until(() => query('#recognition-status').textContent.includes('本地匹配 2 张'));
     assert.equal(query('#hand-text').value, '05s');
     assert.equal(query('#hand').children.length, 2);
@@ -229,8 +242,9 @@ test('online controls stay hidden without model discovery and manual edits cance
     assert.equal(query('#recognize-local').hidden, false);
     assert.doesNotMatch(query('.source-panel .hint').textContent, /在线|模型/);
     host.image();
-    await until(() => !query('#recognize-local').disabled);
-    query('#recognize-local').click();
+    // Let decoding finish, before the matcher resumes its per-tile timer.
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    assert.match(query('#recognition-status').textContent, /正在本地匹配/);
     enter('#hand-text', '12m');
     await until(() => query('#recognition-status').textContent.includes('未覆盖'));
     assert.equal(query('#hand-text').value, '12m');
@@ -242,17 +256,99 @@ test('online controls stay hidden without model discovery and manual edits cance
 
 test('changing the image cancels a pending local result', async () => {
   const host = mockHost();
-  const { dom, query, enter } = mount(host.api, await localPixels());
+  const { dom, query, enter, recognizedImages } = mount(host.api, await localPixels());
   try {
     enter('#hand-text', '12m');
-    host.image();
-    await until(() => !query('#recognize-local').disabled);
-    query('#recognize-local').click();
-    host.image();
+    host.image('first');
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    assert.match(query('#recognition-status').textContent, /正在本地匹配/);
+    const pending = deferImageDecoding(dom);
+    host.image('second');
     assert.equal(query('#recognize-local').disabled, true);
-    await until(() => query('#recognition-status').textContent.includes('图片已就绪'));
     await new Promise((resolve) => setTimeout(resolve, 30));
     assert.equal(query('#hand-text').value, '12m');
+    assert.match(query('#recognition-status').textContent, /正在读取图片/);
+    pending[0].resolve();
+    await until(() => query('#recognition-status').textContent.includes('本地匹配 2 张'));
+    assert.deepEqual(recognizedImages, ['first', 'second']);
+    assert.equal(query('#hand-text').value, '05s');
+    assert.equal(host.modelRequests(), 0);
+    assert.equal(host.options(), undefined);
+    assert.equal(query('#recognize-local').disabled, false);
+  } finally { dom.window.close(); }
+});
+
+test('manual edits while a pasted file is being read suppress automatic recognition', async () => {
+  const { dom, query, enter, recognizedImages } = mount(undefined, await localPixels());
+  try {
+    pasteImage(dom);
+    assert.equal(query('#recognize-local').disabled, true);
+    enter('#hand-text', '12m');
+    await until(() => query('#recognition-status').textContent.includes('加载期间手牌已被编辑'));
+    assert.equal(query('#hand-text').value, '12m');
+    assert.deepEqual(recognizedImages, []);
+    // An explicit retry is still available after cancelling the automatic run.
+    query('#recognize-local').click();
+    await until(() => query('#hand-text').value === '05s');
+  } finally { dom.window.close(); }
+});
+
+test('manual edits while a uTools image decodes are preserved', async () => {
+  const host = mockHost();
+  const { dom, query, enter, recognizedImages } = mount(host.api, await localPixels());
+  try {
+    const pending = deferImageDecoding(dom);
+    host.image();
+    enter('#hand-text', '12m');
+    pending[0].resolve();
+    await until(() => !query('#recognize-local').disabled);
+    assert.equal(query('#hand-text').value, '12m');
+    assert.match(query('#recognition-status').textContent, /未覆盖/);
+    assert.deepEqual(recognizedImages, []);
+  } finally { dom.window.close(); }
+});
+
+test('out-of-order pasted file reads and stale errors cannot replace the newest image', async () => {
+  const { dom, query, recognizedImages } = mount(undefined, await localPixels());
+  try {
+    const readers = [];
+    dom.window.FileReader = class { readAsDataURL() { readers.push(this); } };
+    pasteImage(dom);
+    pasteImage(dom);
+    pasteImage(dom);
+    readers[2].result = 'newest';
+    readers[2].onload();
+    await until(() => query('#recognition-status').textContent.includes('本地匹配 2 张'));
+    const status = query('#recognition-status').textContent;
+    readers[0].result = 'older';
+    readers[0].onload();
+    readers[1].onerror();
+    await new Promise((resolve) => setTimeout(resolve, 30));
+    assert.deepEqual(recognizedImages, ['newest']);
+    assert.equal(query('#recognition-status').textContent, status);
+    assert.equal(query('#hand-text').value, '05s');
+  } finally { dom.window.close(); }
+});
+
+test('only the newest decoded image is recognized and decode failures allow another paste', async () => {
+  const host = mockHost();
+  const { dom, query, recognizedImages } = mount(host.api, await localPixels());
+  try {
+    const pending = deferImageDecoding(dom);
+    host.image('broken');
+    pending[0].reject(new Error('bad image'));
+    await until(() => query('#recognition-status').textContent.includes('图片加载失败'));
+    assert.equal(query('#recognize-local').disabled, true);
+    host.image('older');
+    host.image('newest');
+    pending[2].resolve();
+    await until(() => query('#recognition-status').textContent.includes('本地匹配 2 张'));
+    const status = query('#recognition-status').textContent;
+    pending[1].resolve();
+    await new Promise((resolve) => setTimeout(resolve, 30));
+    assert.deepEqual(recognizedImages, ['newest']);
+    assert.equal(query('#recognition-status').textContent, status);
+    assert.equal(query('#hand-text').value, '05s');
     assert.equal(query('#recognize-local').disabled, false);
   } finally { dom.window.close(); }
 });

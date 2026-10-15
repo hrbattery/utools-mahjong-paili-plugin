@@ -51,7 +51,7 @@ $("#app").innerHTML = `
       </div>
       <div id="dropzone" class="dropzone"><div id="empty-image">拖入或粘贴雀魂 / 天凤截图</div><canvas id="preview" hidden aria-label="手牌截图，拖动框选裁剪区域"></canvas></div>
       <div class="toolbar crop-tools"><button id="crop" hidden>应用裁剪</button><button id="restore-image" hidden>还原图片</button></div>
-      <p class="hint">本地识牌支持雀魂标准、猫咪雀圣、飞鸟与鱼和天凤标准。请先框选横向手牌并应用裁剪，保留完整牌面、排除副露；本地识别不上传图片。</p><p id="recognition-status" role="status" class="status"></p>
+      <p class="hint">粘贴图片后自动本地识牌，支持雀魂标准、猫咪雀圣、飞鸟与鱼和天凤标准。若识别不完整，可框选横向手牌、应用裁剪后重新识牌；保留完整牌面、排除副露。本地识别不上传图片。</p><p id="recognition-status" role="status" class="status"></p>
     </section>
     <section class="hand-panel" aria-label="手牌编辑">
       <div class="section-head"><label for="hand-text">手牌</label><span id="tile-count" class="muted">0 张</span><div class="toolbar"><button id="sort">理牌</button><button id="clear">清空</button></div></div>
@@ -214,9 +214,10 @@ function paintImage(): void {
   }
 }
 
-/** Cancel pending recognition when the source changes, preserving manual hand edits. */
-async function setImage(url: string, original = true): Promise<void> {
+/** Load the latest image, optionally recognizing a paste without overwriting intervening edits. */
+async function setImage(source: string | File, original = true, autoRecognize = false): Promise<void> {
   const revision = ++imageRevision;
+  const handBeforeLoad = handRevision;
   requestId++;
   recognizing = false;
   imageLoading = true;
@@ -224,51 +225,57 @@ async function setImage(url: string, original = true): Promise<void> {
   updateRecognitionButtons();
   activeRequest?.abort?.();
   activeRequest = undefined;
-  const nextImage = new Image();
-  nextImage.src = url;
+  $("#recognition-status").textContent = "正在读取图片…";
   try {
+    // Reserve the revision before FileReader starts so a slow earlier paste cannot win.
+    const url = typeof source === "string" ? source : await readImage(source);
+    if (revision !== imageRevision) return;
+    const nextImage = new Image();
+    nextImage.src = url;
     await nextImage.decode();
+    if (revision !== imageRevision) return;
+    imageLoading = false;
+    image = nextImage;
+    imageUrl = url;
+    if (original) originalImageUrl = url;
+    cropStart = cropEnd = undefined;
+    const canvas = $<HTMLCanvasElement>("#preview");
+    canvas.width = image.naturalWidth;
+    canvas.height = image.naturalHeight;
+    canvas.hidden = false;
+    $("#empty-image").hidden = true;
+    $("#crop").hidden = true;
+    $("#restore-image").hidden = url === originalImageUrl;
+    $("#recognition-status").textContent =
+      "图片已就绪。可拖动框选手牌区域，再点击识别。";
+    updateRecognitionButtons();
+    paintImage();
+    if (autoRecognize) {
+      if (handBeforeLoad !== handRevision) {
+        $("#recognition-status").textContent = "图片加载期间手牌已被编辑，未覆盖你的修改。可点击本地识牌重新识别。";
+        return;
+      }
+      await recognize(true);
+    }
   } catch (error) {
     if (revision === imageRevision) {
       imageLoading = false;
       updateRecognitionButtons();
+      $("#recognition-status").textContent = `图片加载失败：${error instanceof Error ? error.message : String(error)}`;
     }
-    throw error;
   }
-  if (revision !== imageRevision) return;
-  imageLoading = false;
-  image = nextImage;
-  imageUrl = url;
-  if (original) originalImageUrl = url;
-  cropStart = cropEnd = undefined;
-  const canvas = $<HTMLCanvasElement>("#preview");
-  canvas.width = image.naturalWidth;
-  canvas.height = image.naturalHeight;
-  canvas.hidden = false;
-  $("#empty-image").hidden = true;
-  $("#crop").hidden = true;
-  $("#restore-image").hidden = url === originalImageUrl;
-  $("#recognition-status").textContent =
-    "图片已就绪。可拖动框选手牌区域，再点击识别。";
-  updateRecognitionButtons();
-  paintImage();
 }
 
-/** Decode a chosen or pasted image; invalid files leave the previous hand untouched. */
-async function readImage(file: File): Promise<void> {
-  try {
-    if (!["image/png", "image/jpeg", "image/webp"].includes(file.type))
-      throw new Error("请选择 PNG、JPEG 或 WebP 图片。");
-    const url = await new Promise<string>((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => resolve(String(reader.result));
-      reader.onerror = () => reject(new Error("无法读取图片。"));
-      reader.readAsDataURL(file);
-    });
-    await setImage(url);
-  } catch (error) {
-    $("#recognition-status").textContent = String(error);
-  }
+/** Read a supported image file as a data URL for the shared loading path. */
+async function readImage(file: File): Promise<string> {
+  if (!["image/png", "image/jpeg", "image/webp"].includes(file.type))
+    throw new Error("请选择 PNG、JPEG 或 WebP 图片。");
+  return new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = () => reject(new Error("无法读取图片。"));
+    reader.readAsDataURL(file);
+  });
 }
 
 /** Keep local recognition available without an online model or uTools host. */
@@ -497,15 +504,12 @@ $("#copy").onclick = async () => {
 $("#choose-file").onclick = () => $<HTMLInputElement>("#file").click();
 $("#file").onchange = () => {
   const file = $<HTMLInputElement>("#file").files?.[0];
-  if (file) void readImage(file);
+  if (file) void setImage(file);
   $<HTMLInputElement>("#file").value = "";
 };
 $("#capture").onclick = () =>
   host?.screenCapture((url) => {
-    if (url)
-      void setImage(url).catch((error) => {
-        $("#recognition-status").textContent = String(error);
-      });
+    if (url) void setImage(url);
   });
 $("#recognize").onclick = () => void recognize();
 $("#recognize-local").onclick = () => void recognize(true);
@@ -517,7 +521,7 @@ $("#dropzone").ondragover = (event) => {
 $("#dropzone").ondrop = (event) => {
   event.preventDefault();
   const file = event.dataTransfer?.files[0];
-  if (file) void readImage(file);
+  if (file) void setImage(file);
 };
 document.addEventListener("paste", (event) => {
   const file = [...(event.clipboardData?.items ?? [])]
@@ -525,7 +529,7 @@ document.addEventListener("paste", (event) => {
     ?.getAsFile();
   if (file) {
     event.preventDefault();
-    void readImage(file);
+    void setImage(file, true, true);
   }
 });
 
@@ -594,9 +598,7 @@ $("#crop").onclick = () => {
 
 host?.onPluginEnter(({ type, payload }) => {
   if (type === "img")
-    void setImage(payload).catch((error) => {
-      $("#recognition-status").textContent = String(error);
-    });
+    void setImage(payload, true, true);
   if (type === "regex") {
     $<HTMLTextAreaElement>("#hand-text").value = payload;
     $("#hand-text").dispatchEvent(new Event("input"));
